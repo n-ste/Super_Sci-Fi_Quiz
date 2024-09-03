@@ -68,9 +68,16 @@ body {
     color: #ffffff;
     background-color: #222e50;
     text-align: center;
-    margin: 40px 15px;
+    width: 90%;
+    margin: 15px;
     padding: 25px;
     border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+.potential-answers:hover {
+    color: #222e50;
+    background-color: #ffffff;
 }
 
 .btn-submit-answer {
@@ -96,6 +103,10 @@ body {
     .btn-submit-answer {
         margin-left: 35%;
     }
+
+    .potential-answers {
+        width: 95%;
+    }
  }
 
  @media (min-width: 992px) { 
@@ -106,6 +117,10 @@ body {
     .btn-submit-answer {
         margin-left: 37%;
     }
+
+    .potential-answers {
+        width: 96%;
+    }
   }
 
   @media (min-width: 1200px) { 
@@ -115,5 +130,9 @@ body {
 
     .btn-submit-answer {
         margin-left: 39%;
+    }
+
+    .potential-answers {
+        width: 97%;
     }
   }
