@@ -1,0 +1,11 @@
+/* General Styles */
+* {
+    background-color: #ffffff;
+}
+
+.quiz-area {
+    width: 50%;
+    height: 50vh;
+    margin-left: 25%;
+    background-color: aqua;
+}
