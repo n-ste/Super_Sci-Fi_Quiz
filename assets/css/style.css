@@ -73,6 +73,7 @@ body {
     padding: 25px;
     border-radius: 10px;
     border: 2px solid #ffffff;
+    display: block;
 }
 
 .potential-answers:hover {
