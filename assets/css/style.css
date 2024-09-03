@@ -78,6 +78,7 @@ body {
 .potential-answers:hover {
     color: #222e50;
     background-color: #ffffff;
+    border: 2px solid #222e50;
 }
 
 .btn-submit-answer {
