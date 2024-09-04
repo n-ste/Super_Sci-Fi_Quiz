@@ -1,6 +1,6 @@
 let quizArea = document.getElementsByClassName('quiz-area');
 let score = document.getElementById('score');
-let submit = document.getElementsByClassName('btnSubmitAnswer');
+let submit = document.getElementsByClassName('btn-submit-answer');
 
 function build() {
 

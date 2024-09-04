@@ -92,10 +92,15 @@ body {
     padding: 20px;
     background-color: #e9d985;
     border-radius: 10px;
-    border: none;
+    border: 3px solid #ffffff;
     margin-left: 20%;
 }
 
+.btn-submit-answer:hover {
+    color: #e9d985;
+    background-color: #ffffff;
+    border: 3px solid #e9d985;
+}
 @media (min-width: 768px) { 
 
     .quiz-area {
