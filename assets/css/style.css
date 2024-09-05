@@ -146,6 +146,11 @@ body {
         margin: 50px;
     }
 
+    /* Styles for Question Container */
+    .question-container {
+    padding: 50px;
+}
+
     /* Styles for submit answer button */
     .btn-submit-answer {
         margin-left: 35%;
