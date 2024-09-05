@@ -56,7 +56,15 @@ body {
     text-align: center;
     color: #ffffff;
     background-color: #e9d985;
+    border-top: 5px solid #ffffff;
     border-bottom: 2px solid #ffffff;
+}
+
+/* Styles for Question Container */
+.question-container {
+    padding: 20px;
+    background-color: #007991;
+    border-bottom: 3px solid #ffffff;   
 }
 
 /* Styles for question number banner */
@@ -68,9 +76,9 @@ body {
     text-align: center;
     color: #ffffff;
     background-color: #222e50;
-    border-bottom: 2px solid #ffffff;
-}
-
+    border-top: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;   
+}    
 /* Styles for question area banner */
 .question-area {
     font-family: 'Montserrat', sans-serif;
@@ -78,9 +86,14 @@ body {
 
 /* Styles for the quiz question */
 .question {
-    background-color: #007991;
-    padding: 25px;
-    border-bottom: 3px solid #222E50;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #BCD8C1;
+    padding: 50px;
+    border-top: 25px solid #222E50;
+    border-bottom: 25px solid #222E50;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); 
 }
 
 /* Styles for the possible question answers */
