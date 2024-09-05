@@ -53,6 +53,17 @@ body {
     border-bottom: 3px solid #222E50;
 }
 
+.question-number {
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    padding: 15px;
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #222e50;
+    border-bottom: 2px solid #ffffff;
+}
+
 .question-area {
     font-family: 'Montserrat', sans-serif;
 }
