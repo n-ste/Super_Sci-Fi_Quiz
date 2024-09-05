@@ -50,14 +50,14 @@ body {
     text-align: center;
     color: #ffffff;
     background-color: #e9d985;
-    border-bottom: 3px solid #222E50;
+    border-bottom: 2px solid #ffffff;
 }
 
 .question-number {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     padding: 15px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     color: #ffffff;
     background-color: #222e50;
