@@ -8,6 +8,13 @@
 body {
     background-color: #BCD8C1;
 }
+/* Styled main body as a flexbox contianer */
+.instructions-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Styles for title heading */
 .heading {
@@ -20,20 +27,30 @@ body {
     padding: 15px;
     text-align: center;
     background-color: #007991;
-    color: #BCD8C1;
     border-bottom: 3px solid #222E50;
 }
 
+/* Styles for removing the text decoration */
+.heading a {
+    text-decoration: none;
+    color: #BCD8C1;
+}
+
+
 /* Styles for quiz area div */
-.quiz-area {
+#quiz-area, .how-to-play {
     
     background-color: #439A86;
     margin: 15px;
     padding: 0 0 25px 0;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);    
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.75);    
     border-top: 5px solid #222E50;
     border-bottom: 5px solid #222E50;
+    border-radius: 10px; 
+}
 
+.how-to-play {
+    width: 90vw;
 }
 
 /* Styles for score banner */
@@ -50,8 +67,8 @@ body {
     text-align: center;
 }
 
-/* Styles for quiz round banner */
-.quiz-round {
+/* Styles for quiz round banner and game rules title window */
+.quiz-round, .rules-title {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     padding: 15px;
@@ -66,7 +83,7 @@ body {
 .question-container {
     padding: 20px;
     background-color: #007991;
-    border-bottom: 3px solid #ffffff;   
+    border-bottom: 3px solid #ffffff;  
 }
 
 /* Styles for question number banner */
@@ -79,15 +96,15 @@ body {
     color: #ffffff;
     background-color: #222e50;
     border-top: 3px solid #ffffff;
-    border-bottom: 3px solid #ffffff;   
+    border-bottom: 3px solid #ffffff;  
 }    
-/* Styles for question area banner */
+/* Styles for question area banner and how to play window */
 .question-area {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Styles for the quiz question */
-.question {
+/* Styles for the quiz question and game rules */
+.question, .game-rules {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     text-align: center;
@@ -95,7 +112,8 @@ body {
     padding: 50px;
     border-top: 25px solid #222E50;
     border-bottom: 25px solid #222E50;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); 
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.75); 
+    border-radius: 10px; 
 }
 
 /* Styles for the possible question answers */
@@ -103,14 +121,11 @@ body {
     color: #ffffff;
     background-color: #222e50;
     text-align: center;
-    width: 90%;
     margin: 15px;
     padding: 50px;
     border-radius: 10px;
     border: 2px solid #ffffff;
-    display: block;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); 
-}
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.75); }
 
 /* Styles for possible question answers when the user hovers over the potential answer */
 .potential-answers:hover {
@@ -118,9 +133,15 @@ body {
     background-color: #ffffff;
     border: 2px solid #222e50;
 }
-
+.start-buttons, .submit-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
 /* Styles for submit answer button */
-.btn-submit-answer {
+.btn-submit-answer, #btn-start {
     font-family: 'Kanit', sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
@@ -131,15 +152,22 @@ body {
     background-color: #e9d985;
     border-radius: 10px;
     border: 3px solid #ffffff;
-    margin-left: 20%;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); 
+    margin-bottom: 10px;
 }
 
 /* Styles for submit answer button when hovered over */
-.btn-submit-answer:hover {
+.btn-submit-answer:hover, #btn-start:hover {
     color: #e9d985;
     background-color: #ffffff;
     border: 3px solid #e9d985;
+}
+
+#hide {
+    display: none;
+}
+.hide {
+    display: none;
 }
 
 /* Styles for tablet sized screens */
@@ -153,17 +181,11 @@ body {
     /* Styles for Question Container */
     .question-container {
     padding: 50px;
-}
+}   
+    .start-buttons {
+    margin-top: 75px;
+}    
 
-    /* Styles for submit answer button */
-    .btn-submit-answer {
-        margin-left: 35%;
-    }
-
-    /* Styles for the possible question answers */
-    .potential-answers {
-        width: 95%;
-    }
  }
 
  /* Styles for laptop sized sceeens */
@@ -173,16 +195,6 @@ body {
     .quiz-area {
         margin: 100px;
     }
-
-    /* Styles for submit answer button */
-    .btn-submit-answer {
-        margin-left: 37%;
-    }
-
-    /* Styles for the possible question answers */
-    .potential-answers {
-        width: 96%;
-    }
   }
 
   /* Styles for desktop sized screens */
@@ -190,16 +202,6 @@ body {
 
     /* Styles for quiz area div */
     .quiz-area {
-        margin: 150px;
-    }
-
-    /* Styles for submit answer button */
-    .btn-submit-answer {
-        margin-left: 39%;
-    }
-
-    /* Styles for the possible question answers */
-    .potential-answers {
-        width: 97%;
+        margin: 75px;
     }
   }

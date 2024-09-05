@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon Soucred: Favicon.io -->
     <link rel="icon" sizes="favicon-32x32" href="./assets/images/favicon-32x32.png">
     <!-- Links the external stylesheet to the HTML document -->
-    <link rel="stylesheet" type="text/css"  href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <!-- Page Title -->
     <title>Super Sci-Fi Quiz</title>
 </head>
 <!-- Page Body -->
+
 <body>
     <!-- Main Page Heading-->
-    <h1 class="heading">Super Sci-Fi Quiz</h1>
+    <h1 class="heading"><a href="index.html">Super Sci-Fi Quiz</a></h1>
     <!-- Displays the users current score -->
     <p class="score">Score: <span id="score">0</span></p>
+    <div class="instructions-window">
+        <div class="how-to-play" id="how-to-play">
+            <h4 class="rules-title">How to play!</h4>
+            <p class="game-rules">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi saepe sapiente
+                blanditiis molestias vel totam, neque facere consequatur nihil quisquam voluptas, ipsam error ipsum sint
+                illum? Dolore quia consequuntur sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                excepturi ducimus corrupti dicta earum, doloribus sint repellendus itaque ipsam non nisi? Commodi
+                necessitatibus sit harum saepe aliquam iure, qui ut.</p>
+        </div>
+        <div class="start-buttons">
+            <!-- Start Button-->
+            <button id="btn-start">Start</button>
+        </div>
+    </div>
     <!-- Quiz Area Section -->
-    <div class="quiz-area">
+    <div class="hide" id="quiz-area">
         <!-- Quiz Round Section -->
-        <h4 class="quiz-round">Round <span id="round">1</span></h4> 
-            <!-- Displays the current question number -->
-        <h4 class="question-number">Question <span id="round">1</span> / 4</h4> 
+        <h4 class="quiz-round">Round <span id="round">1</span></h4>
+        <!-- Displays the current question number -->
+        <h4 class="question-number">Question <span id="question-number"></span> / 4</h4>
         <!-- Question Area Section -->
         <div class="question-area">
-        <!-- Question Container -->
-        <div class="question-container">
-            <!-- Current Question -->
-            <h3 class="question"></h3>
+            <!-- Question Container -->
+            <div class="question-container">
+                <!-- Current Question -->
+                <h3 class="question"></h3>
+            </div>
+            <div class="answers">
+                <!-- Question Answer Options -->
+                <p class="potential-answers"></p>
+                <p class="potential-answers"></p>
+                <p class="potential-answers"></p>
+                <p class="potential-answers"></p>
+            </div>
+            <div class="submit-buttons">
+                <!-- Submit Answer Button-->
+                <button class="btn-submit-answer" id="btn-submit-answer">Next</button>
+            </div>
         </div>
-            <!-- Question Answer Options -->
-            <button class="potential-answers"></button>
-            <button class="potential-answers"></button>
-            <button class="potential-answers"></button>
-            <button class="potential-answers"></button>
-        </div>
-        <!-- Submit Answer Button-->
-        <button class="btn-submit-answer">Submit Answer</button>
-    </div>
-    <!-- Links the JavaScript file to the HTML document -->
-    <script src="./assets/js/script.js"></script>
+        <!-- Links the JavaScript file to the HTML document -->
+        <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
