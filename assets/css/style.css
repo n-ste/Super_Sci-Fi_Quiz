@@ -1,3 +1,4 @@
+/* Import fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Montserrat&display=swap');
 /* General Styles */
 * {
@@ -8,7 +9,7 @@ body {
     background-color: #BCD8C1;
 }
 
-
+/* Styles for title heading */
 .heading {
     font-family: 'Kanit', sans-serif;
     font-weight: 700;
@@ -23,6 +24,7 @@ body {
     border-bottom: 3px solid #222E50;
 }
 
+/* Styles for quiz area div */
 .quiz-area {
     
     background-color: #439A86;
@@ -30,6 +32,8 @@ body {
     padding: 0 0 25px 0;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);    
 }
+
+/* Styles for score banner */
 .score {
     padding: 20px;
     height: 50px;
@@ -42,6 +46,8 @@ body {
     border-bottom: 3px solid #222E50;
     text-align: center;
 }
+
+/* Styles for quiz round banner */
 .quiz-round {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
@@ -53,6 +59,7 @@ body {
     border-bottom: 2px solid #ffffff;
 }
 
+/* Styles for question number banner */
 .question-number {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
@@ -64,16 +71,19 @@ body {
     border-bottom: 2px solid #ffffff;
 }
 
+/* Styles for question area banner */
 .question-area {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Styles for the quiz question */
 .question {
     background-color: #007991;
     padding: 25px;
     border-bottom: 3px solid #222E50;
 }
 
+/* Styles for the possible question answers */
 .potential-answers {
     color: #ffffff;
     background-color: #222e50;
@@ -86,12 +96,14 @@ body {
     display: block;
 }
 
+/* Styles for possible question answers when the user hovers over the potential answer */
 .potential-answers:hover {
     color: #222e50;
     background-color: #ffffff;
     border: 2px solid #222e50;
 }
 
+/* Styles for submit answer button */
 .btn-submit-answer {
     font-family: 'Kanit', sans-serif;
     font-weight: 700;
@@ -106,49 +118,65 @@ body {
     margin-left: 20%;
 }
 
+/* Styles for submit answer button when hovered over */
 .btn-submit-answer:hover {
     color: #e9d985;
     background-color: #ffffff;
     border: 3px solid #e9d985;
 }
+
+/* Styles for tablet sized screens */
 @media (min-width: 768px) { 
 
+    /* Styles for quiz area div */
     .quiz-area {
         margin: 50px;
     }
 
+    /* Styles for submit answer button */
     .btn-submit-answer {
         margin-left: 35%;
     }
 
+    /* Styles for the possible question answers */
     .potential-answers {
         width: 95%;
     }
  }
 
+ /* Styles for laptop sized sceeens */
  @media (min-width: 992px) { 
+
+    /* Styles for quiz area div */
     .quiz-area {
         margin: 100px;
     }
 
+    /* Styles for submit answer button */
     .btn-submit-answer {
         margin-left: 37%;
     }
 
+    /* Styles for the possible question answers */
     .potential-answers {
         width: 96%;
     }
   }
 
+  /* Styles for desktop sized screens */
   @media (min-width: 1200px) { 
+
+    /* Styles for quiz area div */
     .quiz-area {
         margin: 150px;
     }
 
+    /* Styles for submit answer button */
     .btn-submit-answer {
         margin-left: 39%;
     }
 
+    /* Styles for the possible question answers */
     .potential-answers {
         width: 97%;
     }
