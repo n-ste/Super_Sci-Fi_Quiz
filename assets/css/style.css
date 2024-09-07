@@ -44,13 +44,13 @@ body {
     margin: 15px;
     padding: 0 0 25px 0;
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.75);    
-    border-top: 5px solid #222E50;
     border-bottom: 5px solid #222E50;
     border-radius: 10px; 
 }
 
 .how-to-play {
     width: 90vw;
+    border-top: 2px solid #222E50;
 }
 
 /* Styles for score banner */
@@ -77,8 +77,9 @@ body {
     color: #ffffff;
     background-color: #e9d985;
     border-bottom: 2px solid #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
-
 /* Styles for Question Container */
 .question-container {
     padding: 20px;
@@ -112,8 +113,7 @@ body {
     padding: 50px;
     border-top: 25px solid #222E50;
     border-bottom: 25px solid #222E50;
-    box-shadow: 0 0 10px 2px rgba(0,0,0,0.75); 
-    border-radius: 10px; 
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.75);
 }
 /* Styles the answer container to a flexbox */
 .answers {
