@@ -26,7 +26,7 @@ body {
     height: 150px;
     padding: 15px;
     text-align: center;
-    background-color: #007991;
+    background-color: #E87070;
     border-bottom: 3px solid #222E50;
 }
 
@@ -82,7 +82,7 @@ body {
 /* Styles for Question Container */
 .question-container {
     padding: 20px;
-    background-color: #007991;
+    background-color: #E87070;
     border-bottom: 3px solid #ffffff;  
 }
 
@@ -104,7 +104,7 @@ body {
 }
 
 /* Styles for the quiz question and game rules */
-.question, .game-rules {
+#question, .game-rules {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     text-align: center;
@@ -115,9 +115,13 @@ body {
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.75); 
     border-radius: 10px; 
 }
-
+/* Styles the answer container to a flexbox */
+.answers {
+    display: flex;
+    flex-direction: column;
+}
 /* Styles for the possible question answers */
-.potential-answers {
+#potential-answer-one, #potential-answer-two, #potential-answer-three, #potential-answer-four {
     color: #ffffff;
     background-color: #222e50;
     text-align: center;
@@ -128,7 +132,7 @@ body {
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.75); }
 
 /* Styles for possible question answers when the user hovers over the potential answer */
-.potential-answers:hover {
+#potential-answer-one:hover, #potential-answer-two:hover, #potential-answer-three:hover, #potential-answer-four:hover {
     color: #222e50;
     background-color: #ffffff;
     border: 2px solid #222e50;
