@@ -1,6 +1,6 @@
 
 const nextButton = document.getElementById("btn-submit-answer");
-let score = 0;
+let userScore = document.getElementById("score")
 
 const myQuestionsArray = [
     {
@@ -51,7 +51,6 @@ let questionNumber = document.getElementById("question-number")
 
 function displayQuestion() {
     questionNumber.innerHTML = questionNumberIndex + 1;
-
     const index = Math.floor(Math.random() * myQuestionsArray.length)
     const question = myQuestionsArray[index]
     questionElement.innerHTML = question.question;
@@ -60,10 +59,12 @@ function displayQuestion() {
     potentialAnswerThree.innerHTML = question.optionThree
     potentialAnswerFour.innerHTML = question.optionFour
 
-    if (option == correct) {
+   /* if (option == correct) {
         option.document.body.style.color = "#bcd8c1" 
+        userScore.innerHTML = score + 1;
     } else {
         option.document.body.style.color = "#E87070" 
-    }
+        alert("Answer Incorrect!")
+    }*/
 }
 displayQuestion();

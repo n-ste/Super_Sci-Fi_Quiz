@@ -26,14 +26,14 @@ body {
     height: 150px;
     padding: 15px;
     text-align: center;
-    background-color: #E87070;
+    background-color: #6C7FB4;
     border-bottom: 3px solid #222E50;
 }
 
 /* Styles for removing the text decoration */
 .heading a {
     text-decoration: none;
-    color: #BCD8C1;
+    color: #222E50;
 }
 
 
@@ -82,7 +82,7 @@ body {
 /* Styles for Question Container */
 .question-container {
     padding: 20px;
-    background-color: #E87070;
+    background-color: #6C7FB4;
     border-bottom: 3px solid #ffffff;  
 }
 
