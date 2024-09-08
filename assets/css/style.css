@@ -8,213 +8,78 @@
 body {
     background-color: #BCD8C1;
 }
-/* Styled main body as a flexbox contianer */
-.instructions-window {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-/* Styles for title heading */
 .heading {
     font-family: 'Kanit', sans-serif;
-    font-weight: 700;
     text-transform: uppercase;
-    font-size: 3em;
-    display: block;
-    height: 150px;
-    padding: 15px;
+    color: #bcd8c1;
+    background-color: #e87070;
     text-align: center;
-    background-color: #6C7FB4;
-    border-bottom: 3px solid #222E50;
 }
-
-/* Styles for removing the text decoration */
-.heading a {
-    text-decoration: none;
-    color: #222E50;
-}
-
-
-/* Styles for quiz area div */
-#quiz-area, .how-to-play {
-    
-    background-color: #439A86;
-    margin: 15px;
-    padding: 0 0 25px 0;
-    box-shadow: 0 0 10px 2px rgba(0,0,0,0.75);    
-    border-bottom: 5px solid #222E50;
-    border-radius: 10px; 
-}
-
-.how-to-play {
-    width: 90vw;
-    border-top: 2px solid #222E50;
-}
-
-/* Styles for score banner */
 .score {
-    padding: 20px;
-    height: 50px;
+    background-color: #e9d985;
+    color: #222e50;
+}
+#quiz-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #439a86;
+}
+#question-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #bcd8c1;
+    width: 70%;
+    margin: 100px;
+
+}
+.question-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.question-number {
+    background-color: #222e50;
     color: #ffffff;
-    background-color: #439A86;
+    width: 100%;
+}
+.score, .question-number {
     font-family: 'Kanit', sans-serif;
     font-weight: 700;
-    text-transform: uppercase;
-    font-size: 2rem;
-    border-bottom: 3px solid #222E50;
     text-align: center;
-}
-
-/* Styles for quiz round banner and game rules title window */
-.quiz-round, .rules-title {
-    font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
-    padding: 15px;
-    font-size: 2rem;
-    text-align: center;
-    color: #ffffff;
-    background-color: #e9d985;
-    border-bottom: 2px solid #ffffff;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
-/* Styles for Question Container */
-.question-container {
-    padding: 20px;
-    background-color: #6C7FB4;
-    border-bottom: 3px solid #ffffff;  
-}
-
-/* Styles for question number banner */
-.question-number {
-    font-family: 'Kanit', sans-serif;
-    text-transform: uppercase;
-    padding: 15px;
-    font-size: 1.5rem;
-    text-align: center;
-    color: #ffffff;
-    background-color: #222e50;
-    border-top: 3px solid #ffffff;
-    border-bottom: 3px solid #ffffff;  
-}    
-/* Styles for question area banner and how to play window */
-.question-area {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Styles for the quiz question and game rules */
-#question, .game-rules {
-    font-family: 'Kanit', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    background-color: #BCD8C1;
-    padding: 50px;
-    border-top: 25px solid #222E50;
-    border-bottom: 25px solid #222E50;
-    box-shadow: 0 0 10px 2px rgba(0,0,0,0.75);
-}
-/* Styles the answer container to a flexbox */
 .answers {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-/* Styles for the possible question answers */
-#potential-answer-one, #potential-answer-two, #potential-answer-three, #potential-answer-four {
-    color: #ffffff;
-    background-color: #222e50;
-    text-align: center;
-    margin: 15px;
-    padding: 50px;
-    border-radius: 10px;
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 10px 2px rgba(0,0,0,0.75); }
 
-/* Styles for possible question answers when the user hovers over the potential answer */
-#potential-answer-one:hover, #potential-answer-two:hover, #potential-answer-three:hover, #potential-answer-four:hover {
-    color: #222e50;
+.answer-option, .btn-submit-answer {
+    padding: 25px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #222e50;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+.answer-option:hover, .btn-submit-answer:hover {
+    padding: 25px;
+    margin: 10px;
+    border-radius: 10px;
     background-color: #ffffff;
+    color: #222e50;
     border: 2px solid #222e50;
 }
-/* Adds background colour to correct answers */
-.correct {
-    background-color: green;
-}
-
-/* Adds background colour to incorrect answers */
-.incorrect {
-    background-color: red;
-}
-.start-buttons, .submit-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-/* Styles for submit answer button */
-.btn-submit-answer, #btn-start {
-    font-family: 'Kanit', sans-serif;
-    font-weight: 700;
-    letter-spacing: 2px;
+#question {
+    margin: 25px;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    color: #ffffff;
-    font-size: 1rem;
-    padding: 20px;
-    background-color: #e9d985;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); 
-    margin-bottom: 10px;
-}
-
-/* Styles for submit answer button when hovered over */
-.btn-submit-answer:hover, #btn-start:hover {
-    color: #e9d985;
-    background-color: #ffffff;
-    border: 3px solid #e9d985;
-}
-
-#hide {
-    display: none;
-}
-.hide {
-    display: none;
-}
-
-/* Styles for tablet sized screens */
-@media (min-width: 768px) { 
-
-    /* Styles for quiz area div */
-    .quiz-area {
-        margin: 50px;
-    }
-
-    /* Styles for Question Container */
-    .question-container {
+    text-align: center;
     padding: 50px;
-}   
-    .start-buttons {
-    margin-top: 75px;
-}    
-
- }
-
- /* Styles for laptop sized sceeens */
- @media (min-width: 992px) { 
-
-    /* Styles for quiz area div */
-    .quiz-area {
-        margin: 100px;
-    }
-  }
-
-  /* Styles for desktop sized screens */
-  @media (min-width: 1200px) { 
-
-    /* Styles for quiz area div */
-    .quiz-area {
-        margin: 75px;
-    }
-  }
+    width: 100%;
+    background-color: #6c7fb4;
+    border: 2px solid #222e50;
+}
