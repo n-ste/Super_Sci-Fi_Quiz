@@ -137,6 +137,15 @@ body {
     background-color: #ffffff;
     border: 2px solid #222e50;
 }
+/* Adds background colour to correct answers */
+.correct {
+    background-color: green;
+}
+
+/* Adds background colour to incorrect answers */
+.incorrect {
+    background-color: red;
+}
 .start-buttons, .submit-buttons {
     display: flex;
     flex-direction: column;
