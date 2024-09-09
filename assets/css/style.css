@@ -109,7 +109,7 @@ body {
     border: 2px solid #e87070;
     pointer-events: none;
 }
-.disabled {
+#answers.disabled {
     pointer-events: none;
 }
 .btn-submit-answer {

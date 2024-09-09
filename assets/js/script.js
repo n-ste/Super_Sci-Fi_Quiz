@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    let answerOptions = document.getElementById("answer-option");
     let userScore = document.getElementById("score");
     let myQuestionArray = [{
             question: "In what year was the movie 'Star Wars' relased?",
@@ -72,13 +73,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (selectedAnswer == myQuestionArray[questionNo].correct) {
             currentUserScore + 1;
             e.target.classList.add("correct");
+            options.classList.add("disabled");
         } else {
             e.target.classList.add("incorrect");
+            options.classList.add("disabled");
         }
-        let disablePointer = document.querySelectorAll(".question-container .answer-option");
-        disablePointer.forEach((option) => {
-            option.classList.add = "disabled";
-        });
+        //let disablePointer = document.querySelectorAll(".question-container .answer-option");
+        //disablePointer.forEach((option) => {
+         //   option.classList.add = "disabled";
+       // });
     };
     const questionAllowance = 10;
     const questionShuffle = (array) => {
@@ -112,11 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         questionNo++;
         displayQuestions();
+        options.classList.remove("disabled");
     };
-    function quizComplete() {
-        quizArea.classList.add("hide");
-    }
-    quizComplete();
+   
     submitButton.addEventListener("click", nextQuestion);
     scoreIncrement();
 });
