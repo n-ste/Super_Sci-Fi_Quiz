@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let answerOptions = document.getElementById("answer-option");
     let userScore = document.getElementById("score");
     let myQuestionArray = [{
             question: "In what year was the movie 'Star Wars' relased?",
@@ -63,26 +62,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let questionNo = 0;
     let currentUserScore = 0;
 
-    function scoreIncrement() {
-        userScore.innerHTML = `${currentUserScore}`;
-    };
-
     const verifyAnswer = (e) => {
         let selectedAnswer = e.target.textContent;
         console.log(selectedAnswer);
         if (selectedAnswer == myQuestionArray[questionNo].correct) {
-            currentUserScore + 1;
             e.target.classList.add("correct");
             options.classList.add("disabled");
+            currentUserScore++;
         } else {
             e.target.classList.add("incorrect");
             options.classList.add("disabled");
         }
-        //let disablePointer = document.querySelectorAll(".question-container .answer-option");
-        //disablePointer.forEach((option) => {
-         //   option.classList.add = "disabled";
-       // });
     };
+
     const questionAllowance = 10;
     const questionShuffle = (array) => {
         return array.slice().sort(() => Math.random() - 0.5);
@@ -91,10 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
     myQuestionArray = questionShuffle(myQuestionArray);
     // Help displaying the questions and options for quiz sources from Youtube, credits in README file.
     const displayQuestions = () => {
+        // NEEDS TO MOVED TO VERIFY userScore.innerHTML = currentUserScore;
         options.innerHTML = "";
         questionNumber.innerHTML = questionNo + 1;
         question.innerHTML = myQuestionArray[questionNo].question;
-
         myQuestionArray[questionNo].options.forEach((option) => {
             const answerOption = document.createElement("button");
             answerOption.classList.add("answer-option");
@@ -105,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
             options.appendChild(answerOption);
         });
     }
-
     displayQuestions();
 
     function nextQuestion() {
@@ -119,5 +110,4 @@ document.addEventListener("DOMContentLoaded", () => {
     };
    
     submitButton.addEventListener("click", nextQuestion);
-    scoreIncrement();
 });
