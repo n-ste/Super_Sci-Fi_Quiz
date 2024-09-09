@@ -41,8 +41,8 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #bcd8c1;
-    width: 70%;
     margin: 25px;
+    padding: 0 0 20px 0;
     border-radius: 10px;
 }
 .question-container {
@@ -71,7 +71,7 @@ body {
     flex-direction: column;
 }
 .answer-option {
-    margin: 10px;
+    margin: 2px;
     background-color: #222e50;
     color: #ffffff;
     border: 2px solid #ffffff;
@@ -81,7 +81,8 @@ body {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: 700;
-    padding: 25px 90px;
+    padding: 25px 50px;
+    width: 250px;
     border-radius: 10px;
 }
 .answer-option.correct {
@@ -149,7 +150,8 @@ body {
 }
 @media screen and (min-width: 768px) {
     .answer-option, .btn-submit-answer {
-        padding: 25px 230px;
+        padding: 25px 150px;
+        width: 100%;
     }
     .answer-option:hover, .btn-submit-answer:hover {
         padding: 25px 230px;
@@ -158,9 +160,6 @@ body {
 
 @media screen and (min-width: 992px) {
     .answer-option, .btn-submit-answer {
-        padding: 25px 300px;
-    }
-    .answer-option:hover, .btn-submit-answer:hover {
         padding: 25px 300px;
     }
 } 
