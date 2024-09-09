@@ -17,7 +17,7 @@
     <!-- Main Page Heading-->
     <h1 class="heading"><a href="index.html">Super Sci-Fi Quiz</a></h1>
     <!-- Displays the users current score -->
-    <p class="score">Score: <span id="score">0</span></p>
+    <p class="score">Score: <span id="score"></span></p>
     <!-- Quiz Area Section -->
     <div id="quiz-area">
         <!-- Question Area Section -->
@@ -32,11 +32,15 @@
             <div id="answers">
                 <!-- Question Answer Options -->
             </div>
-            <div class="submit-buttons">
-                <!-- Submit Answer Button-->
-                <button class="btn-submit-answer" id="btn-submit-answer">Next</button>
-            </div>
         </div>
+        <div class="submit-buttons">
+            <!-- Submit Answer Button-->
+            <button class="btn-submit-answer" id="btn-submit-answer">Next</button>
+        </div>
+        <div id="quiz-ends">
+            <p>Congratulations for taking part, you scored <span id="quiz-result"></span> /10.</p>
+        </div>
+
         <!-- Links the JavaScript file to the HTML document -->
         <script src="./assets/js/script.js"></script>
 </body>
