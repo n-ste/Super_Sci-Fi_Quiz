@@ -29,7 +29,7 @@ body {
     font-size: 2rem;
     border-bottom: 5px solid #222e50;
 }
-#quiz-area {
+#quiz-area, #score-board {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,7 +76,7 @@ body {
     color: #ffffff;
     border: 2px solid #ffffff;
 }
-.answer-option, .btn-submit-answer {
+.answer-option, .btn-submit-answer, #btn-score-board {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     font-size: 1em;
@@ -112,7 +112,7 @@ body {
 #answers.disabled {
     pointer-events: none;
 }
-.btn-submit-answer {
+.btn-submit-answer, #btn-score-board {
     margin-bottom: 10px;
     padding: 25px;
     border-radius: 10px;
@@ -145,7 +145,7 @@ body {
 #quiz-ends {
     display: none;
 }
-.hide {
+.hide, #quiz-area.hide {
     display: none;
 }
 @media screen and (min-width: 768px) {

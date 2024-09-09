@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             correct: "Gallifrey",
         },
         {
-            question: "Where we’re going, we don’t need roads” is a quote from which 80’s time travel movie?",
+            question: "'Where we’re going, we don’t need roads' is a quote from which 80’s time travel movie?",
             options: ["Star Wars: Return of the Jedi", "Back to the Future II", "The Terminatior", "Twelve Monkeys"],
             correct: "Back to the Future II",
         },
@@ -53,10 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    const quizArea = document.getElementById('quiz-area');
+    const quizArea = document.getElementById('question-area');
     const question = document.getElementById("question");
     const options = document.getElementById("answers");
     const submitButton = document.querySelector(".submit-buttons .btn-submit-answer");
+    const scoreBoardButton = document.getElementById("btn-score-board");
     let questionNumber = document.getElementById("question-number");
     const endQuiz = document.querySelector("quiz-ends");
     let questionNo = 0;
@@ -64,17 +65,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const verifyAnswer = (e) => {
         let selectedAnswer = e.target.textContent;
+        currentUserScore++;
+        userScore.innerHTML = currentUserScore;
         console.log(selectedAnswer);
         if (selectedAnswer == myQuestionArray[questionNo].correct) {
             e.target.classList.add("correct");
             options.classList.add("disabled");
-            currentUserScore++;
         } else {
             e.target.classList.add("incorrect");
             options.classList.add("disabled");
         }
     };
-
+    
     const questionAllowance = 10;
     const questionShuffle = (array) => {
         return array.slice().sort(() => Math.random() - 0.5);
@@ -83,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
     myQuestionArray = questionShuffle(myQuestionArray);
     // Help displaying the questions and options for quiz sources from Youtube, credits in README file.
     const displayQuestions = () => {
-        // NEEDS TO MOVED TO VERIFY userScore.innerHTML = currentUserScore;
         options.innerHTML = "";
         questionNumber.innerHTML = questionNo + 1;
         question.innerHTML = myQuestionArray[questionNo].question;
@@ -100,9 +101,14 @@ document.addEventListener("DOMContentLoaded", () => {
     displayQuestions();
 
     function nextQuestion() {
+        if (questionNo >= questionAllowance - 2) {
+            submitButton.classList.add("hide");
+            scoreBoardButton.classList.remove("hide");
+        }
+
         if (questionNo >= questionAllowance - 1) {
             return;
-        } 
+        };
 
         questionNo++;
         displayQuestions();
