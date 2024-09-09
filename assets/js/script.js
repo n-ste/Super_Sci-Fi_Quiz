@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
             correct: "Leonard Nimoy",
         },
         {
-            question: "In what decase is the TV show Stranger Things set in?",
+            question: "In what decade is the TV show Stranger Things set in?",
             options: ["2000s", "1980s", "1990s", "1970s"],
             correct: "1980s"
 
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (questionNo >= questionAllowance - 1) {
             return;
         } 
-        
+
         questionNo++;
         displayQuestions();
     };
