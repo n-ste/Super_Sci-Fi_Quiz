@@ -58,8 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const options = document.getElementById("answers");
     const submitButton = document.querySelector(".submit-buttons .btn-submit-answer");
     const scoreBoardButton = document.getElementById("btn-score-board");
+    const playAgain = document.getElementById("play-again-btn");
+    let scoreBoardTable = document.getElementById("score-board-table");
     let questionNumber = document.getElementById("question-number");
-    const endQuiz = document.querySelector("quiz-ends");
     let questionNo = 0;
     let currentUserScore = 0;
 
@@ -114,6 +115,15 @@ document.addEventListener("DOMContentLoaded", () => {
         displayQuestions();
         options.classList.remove("disabled");
     };
-   
+    function generateScoreBoard() {
+        quizArea.style.display = "none";
+        scoreBoardTable.classList.remove("hide");
+        scoreBoardButton.classList.add("hide");
+        playAgain.classList.remove("hide");
+    };
+
     submitButton.addEventListener("click", nextQuestion);
+    scoreBoardButton.addEventListener("click",generateScoreBoard);
+
+    
 });

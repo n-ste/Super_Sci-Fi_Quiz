@@ -27,7 +27,7 @@
             <!-- Question Container -->
             <div class="question-container">
                 <!-- Current Question -->
-                <h3 id="question">hh</h3>
+                <h3 id="question"></h3>
             </div>
             <div id="answers">
                 <!-- Question answer options created through JavaScript -->
@@ -37,15 +37,14 @@
             <!-- Submit Answer Button-->
             <button class="btn-submit-answer" id="btn-submit-answer">Next</button>
         </div>
-        <div id="quiz-ends">
-            <p>Congratulations for taking part, you scored <span id="quiz-result"></span> /10.</p>
+        <div id="score-board">
+            <p id="score-board-table" class="hide">
+                <button id="play-again-btn" class="hide">Play Again</button>            </p>
+            <button class="hide" id="btn-score-board">Scoreboard</button>
         </div>
     </div>
-    <div id="score-board">
-        <button class="hide" id="btn-score-board">Scoreboard</button>
-    </div>
-        <!-- Links the JavaScript file to the HTML document -->
-        <script src="./assets/js/script.js"></script>
+    <!-- Links the JavaScript file to the HTML document -->
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
