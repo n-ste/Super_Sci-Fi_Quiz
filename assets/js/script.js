@@ -59,6 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const submitButton = document.querySelector(".submit-buttons .btn-submit-answer");
     const scoreBoardButton = document.getElementById("btn-score-board");
     const playAgain = document.getElementById("play-again-btn");
+    const resetGame = document.getElementById("reset-btn");
+    const gameRules = document.getElementById("game-rules-btn");
+    const scoreBoardHeader = document.getElementById("btn-score-board-header");
     let scoreBoardTable = document.getElementById("score-board-table");
     let questionNumber = document.getElementById("question-number");
     let questionNo = 0;
@@ -120,6 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scoreBoardTable.classList.remove("hide");
         scoreBoardButton.classList.add("hide");
         playAgain.classList.remove("hide");
+        submitButton.classList.add("hide");
     };
 
     function restart() {
@@ -136,4 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton.addEventListener("click", nextQuestion);
     scoreBoardButton.addEventListener("click",generateScoreBoard);
     playAgain.addEventListener("click", restart);
+    resetGame.addEventListener("click", restart);
+    scoreBoardHeader.addEventListener("click", generateScoreBoard);
 });
