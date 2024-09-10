@@ -27,6 +27,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: #6c7fb4;
 }
 .score {
@@ -145,9 +146,6 @@ nav {
 }
 
 #btn-score-board-header:hover, #game-rules-btn:hover, #reset-btn:hover {
-    margin-bottom: 10px;
-    padding: 25px;
-    border-radius: 10px;
     background-color: #222e50;
     color: #439a86;
     border: 3px solid #439a86;
@@ -186,27 +184,68 @@ nav {
     display: none;
 }
 @media screen and (min-width: 768px) {
-    .answer-option, .btn-submit-answer {
+    nav {
+        flex-direction: row;
+    }
+    #game-rules-btn, #btn-score-board-header, #reset-btn {
+        margin: 25px 5px;
+        padding: 25px;
+        border-radius: 10px;
+    }
+    .answer-option {
+        width: 500px;
+    }
+    #question {
+        width: 400px;
+    }
+    #question-area {
+        width: 600px;
+    }
+    #question-container {
+        width: 550px;
+    }
+    .btn-submit-answer {
         padding: 25px 150px;
         width: 100%;
     }
-    .answer-option:hover, .btn-submit-answer:hover {
+    .btn-submit-answer:hover {
         padding: 25px 230px;
     }
 } 
 
 @media screen and (min-width: 992px) {
-    .answer-option, .btn-submit-answer {
+    .btn-submit-answer {
         padding: 25px 300px;
+    }
+    .answer-option {
+        width: 600px;
+    }
+    #question {
+        width: 490px;
+    }
+    #question-area {
+        width: 700px;
+    }
+    .question-container {
+        width: 650px;
     }
 } 
 
 @media screen and (min-width: 1200px) {
-    .answer-option, .btn-submit-answer {
+    .answer-option {
+        width: 700px;
+    }
+    #question {
+        width: 600px;
+    }
+    #question-area {
+        width: 800px;
+    }
+    .btn-submit-answer {
         padding: 25px 300px;
     }
 
-    .answer-option:hover, .btn-submit-answer:hover {
+    .btn-submit-answer:hover {
         padding: 25px 300px;
     }
 } 
