@@ -122,8 +122,22 @@ document.addEventListener("DOMContentLoaded", () => {
         playAgain.classList.remove("hide");
     };
 
+    function restart() {
+        questionNo = 0;
+        currentUserScore = 0;
+        userScore.innerHTML = currentUserScore;
+        displayQuestions();
+        quizArea.style.display = "flex";
+        options.classList.remove("disabled");
+        submitButton.classList.remove("hide");
+        playAgain.classList.add("hide");
+
+    }
+
     submitButton.addEventListener("click", nextQuestion);
     scoreBoardButton.addEventListener("click",generateScoreBoard);
+    playAgain.addEventListener("click", restart);
+
 
     
 });
