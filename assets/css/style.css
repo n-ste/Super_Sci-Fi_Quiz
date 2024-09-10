@@ -111,7 +111,7 @@ nav {
     color: #ffffff;
     border: 2px solid #ffffff;
 }
-.answer-option, .btn-submit-answer, #btn-score-board, #btn-score-board-header, #game-rules-btn, #reset-btn, #play-again-btn {
+#start-btn, .answer-option, .btn-submit-answer, #btn-score-board, #btn-score-board-header, #game-rules-btn, #reset-btn, #play-again-btn {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     font-size: 1em;
@@ -147,7 +147,7 @@ nav {
 #answers.disabled {
     pointer-events: none;
 }
-.btn-submit-answer, #btn-score-board, #play-again-btn {
+#start-btn, .btn-submit-answer, #btn-score-board, #play-again-btn {
     margin-bottom: 10px;
     padding: 25px;
     border-radius: 10px;
@@ -179,10 +179,13 @@ nav {
     color: #222e50;
     border: 2px solid #222e50;
 }
-.btn-submit-answer:hover, #btn-score-board:hover, #play-again-btn:hover {
+#start-btn:hover, .btn-submit-answer:hover, #btn-score-board:hover, #play-again-btn:hover {
     background-color: #222e50;
     color: #e9d985;
     border: 3px solid #e9d985;
+}
+#start-btn {
+    margin: 25px 0;
 }
 #instructions-text {
     text-align: justify;
