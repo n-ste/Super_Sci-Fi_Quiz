@@ -28,7 +28,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #6c7fb4;
+    background-color: #BCD8C1;
 }
 .score {
     background-color: #e9d985;
@@ -40,10 +40,10 @@ nav {
 }
 #quiz-area {
     border-bottom: 5px solid #222e50;
+    display: none;
 }
 
 #quiz-area, #score-board {
-    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #439a86;

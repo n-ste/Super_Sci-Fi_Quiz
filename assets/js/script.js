@@ -53,13 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    const quizArea = document.getElementById('question-area');
+    const quizArea = document.getElementById("question-area");
     const question = document.getElementById("question");
     const options = document.getElementById("answers");
     const submitButton = document.querySelector(".submit-buttons .btn-submit-answer");
     const scoreBoardButton = document.getElementById("btn-score-board");
     const playAgain = document.getElementById("play-again-btn");
     const resetGame = document.getElementById("reset-btn");
+    const game = document.getElementById("quiz-area");
     const gameRules = document.getElementById("game-rules-btn");
     const scoreBoardHeader = document.getElementById("btn-score-board-header");
     let scoreBoardTable = document.getElementById("score-board-table");
@@ -85,10 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const questionShuffle = (array) => {
         return array.slice().sort(() => Math.random() - 0.5);
     };
+    function startGame() {
 
+    }
     myQuestionArray = questionShuffle(myQuestionArray);
     // Help displaying the questions and options for quiz sources from Youtube, credits in README file.
-    const displayQuestions = () => {
+    const displayQuestions = () => {;
         options.innerHTML = "";
         questionNumber.innerHTML = questionNo + 1;
         question.innerHTML = myQuestionArray[questionNo].question;
@@ -135,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         options.classList.remove("disabled");
         submitButton.classList.remove("hide");
         playAgain.classList.add("hide");
+        game.style.display = "flex";
     }
 
     submitButton.addEventListener("click", nextQuestion);
