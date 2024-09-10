@@ -19,15 +19,24 @@
         <h1 class="heading"><a href="index.html">Super Sci-Fi Quiz</a></h1>
         <nav>
             <div class="bars-show">
-            <div class="hi.de">
-                <button id="game-rules-btn">Game Rules</button>
-                <button id="btn-score-board-header">Scoreboard</button>
-                <button id="reset-btn">Reset Game</button></div>
+                <div class="hi.de">
+                    <button id="game-rules-btn">Game Rules</button>
+                    <button id="btn-score-board-header">Scoreboard</button>
+                    <button id="reset-btn">Reset Game</button></div>
             </div>
         </nav>
     </header>
     <!-- Displays the users current score -->
     <p class="score">Score: <span id="score">0</span></p>
+    <div class="game-instructions">
+        <h2 id="how-to-play">How to Play!</h2>
+        <p>Hello and welcome to the Super Sci-Fi Quiz. The instructions are simple...</p>
+        <p>Once you press start you'll be asked 10 questions rellating to the sci-fi genre. There will be no time limit, once selected the option you
+        selected will either go green if correct, or red if the answer was incorrect. You won't be able to change your answer. </p> 
+        <p>When answered you'll then need to click on the next button which will take you to the next
+        question. There will be a scoreboard at the end which will let you know how many points you scored, you'll
+        get 1 point for each question you answer correct. Good luck!</p>
+    </div>
     <!-- Quiz Area Section -->
     <div id="quiz-area">
         <!-- Question Area Section -->
@@ -49,7 +58,7 @@
         </div>
         <div id="score-board">
             <p id="score-board-table" class="hide">
-                <button id="play-again-btn" class="hide">Play Again</button>            </p>
+                <button id="play-again-btn" class="hide">Play Again</button> </p>
             <button class="hide" id="btn-score-board">Scoreboard</button>
         </div>
     </div>
