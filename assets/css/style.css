@@ -50,31 +50,50 @@ nav {
 }
 
 #question-area {
+    text-align: justify;
+}
+#game-instructions {
+    margin: auto;
+    width: 100%;
+}
+#question-area {
+    width: 300px;
+    margin: 25px;
+}
+#question-area, #game-instructions {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #bcd8c1;
-    margin: 25px;
     padding: 0 0 20px 0;
     border-radius: 10px;
-    width: 300px;
+    
 }
 .question-container {
    display: flex;
    flex-direction: column;
    align-items: center;
 }
+#how-to-play {
+    margin: 25px 0 0 0;
+    width: 86%;
+
+}
 .question-number {
+    width: 100%;
+}
+
+.question-number, #how-to-play {
     background-color: #222e50;
     font-size: 1.5rem;
     color: #ffffff;
-    width: 100%;
     height: 40px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
 }
-.score, .question-number {
+.score, .question-number, #game-instructions {
     font-family: 'Kanit', sans-serif;
     font-weight: 700;
     text-align: center;
@@ -155,7 +174,6 @@ nav {
     margin: 15px;
 }
 
-
 .answer-option:hover {
     background-color: #ffffff;
     color: #222e50;
@@ -166,17 +184,29 @@ nav {
     color: #e9d985;
     border: 3px solid #e9d985;
 }
-
-#question {
-    margin: 25px;
+#instructions-text {
+    text-align: justify;
+    line-height: 2rem;
+}
+#question, #instructions-text {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    text-align: center;
     padding: 50px;
     background-color: #ffffff;
     border: 2px solid #222e50;
     border-radius: 10px;
 }
+#question {
+    text-align: center;
+    margin: 25px;
+}
+#instructions-text {
+    margin: 0 25px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+}
+
 #quiz-ends {
     display: none;
 }
@@ -198,7 +228,7 @@ nav {
     #question {
         width: 400px;
     }
-    #question-area {
+    #question-area, #game-instructions {
         width: 600px;
     }
     #question-container {
@@ -223,7 +253,7 @@ nav {
     #question {
         width: 490px;
     }
-    #question-area {
+    #question-area, #game-instructions {
         width: 700px;
     }
     .question-container {
@@ -238,7 +268,7 @@ nav {
     #question {
         width: 600px;
     }
-    #question-area {
+    #question-area, #game-instructions {
         width: 800px;
     }
     .btn-submit-answer {
