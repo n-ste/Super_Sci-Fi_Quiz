@@ -24,8 +24,10 @@ body {
 }
 nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-color: #6c7fb4;
 }
 .score {
     background-color: #e9d985;
@@ -54,6 +56,7 @@ nav {
     margin: 25px;
     padding: 0 0 20px 0;
     border-radius: 10px;
+    width: 300px;
 }
 .question-container {
    display: flex;
@@ -79,15 +82,16 @@ nav {
 #answers {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .answer-option {
     margin: 2px;
     background-color: #222e50;
     color: #ffffff;
     border: 2px solid #ffffff;
-    width: 50rem;
 }
-.answer-option, .btn-submit-answer, #btn-score-board, #btn-score-board-header, #play-again-btn {
+.answer-option, .btn-submit-answer, #btn-score-board, #btn-score-board-header, #game-rules-btn, #reset-btn, #play-again-btn {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     font-size: 1em;
@@ -128,10 +132,10 @@ nav {
     padding: 25px;
     border-radius: 10px;
     background-color: #e9d985;
-    color: #6c7fb4;
-    border: 3px solid #6c7fb4;
+    color: #222e50;
+    border: 3px solid #222e50;
 }
-#btn-score-board-header {
+#btn-score-board-header, #game-rules-btn, #reset-btn {
     margin: 10px;
     padding: 25px;
     border-radius: 10px;
@@ -140,7 +144,7 @@ nav {
     border: 3px solid #222e50;
 }
 
-#btn-score-board-header:hover {
+#btn-score-board-header:hover, #game-rules-btn:hover, #reset-btn:hover {
     margin-bottom: 10px;
     padding: 25px;
     border-radius: 10px;
@@ -160,7 +164,7 @@ nav {
     border: 2px solid #222e50;
 }
 .btn-submit-answer:hover, #btn-score-board:hover, #play-again-btn:hover {
-    background-color: #6c7fb4;
+    background-color: #222e50;
     color: #e9d985;
     border: 3px solid #e9d985;
 }
@@ -171,7 +175,7 @@ nav {
     text-transform: uppercase;
     text-align: center;
     padding: 50px;
-    background-color: #6c7fb4;
+    background-color: #ffffff;
     border: 2px solid #222e50;
     border-radius: 10px;
 }
