@@ -61,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const playAgain = document.getElementById("play-again-btn");
     const resetGame = document.getElementById("reset-btn");
     const game = document.getElementById("quiz-area");
+    const startButton = document.getElementById("start-btn");
     const gameRules = document.getElementById("game-rules-btn");
+    const gameinstructions = document.getElementById("game-instructions");
     const scoreBoardHeader = document.getElementById("btn-score-board-header");
     let scoreBoardTable = document.getElementById("score-board-table");
     let questionNumber = document.getElementById("question-number");
@@ -86,8 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const questionShuffle = (array) => {
         return array.slice().sort(() => Math.random() - 0.5);
     };
-    function startGame() {
-
+    function submitUsername() {
+        gameinstructions.style.display = "none";
     }
     myQuestionArray = questionShuffle(myQuestionArray);
     // Help displaying the questions and options for quiz sources from Youtube, credits in README file.
@@ -141,6 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         game.style.display = "flex";
     }
 
+    startButton.addEventListener("click", submitUsername);
     submitButton.addEventListener("click", nextQuestion);
     scoreBoardButton.addEventListener("click",generateScoreBoard);
     playAgain.addEventListener("click", restart);

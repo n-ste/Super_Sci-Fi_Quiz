@@ -75,11 +75,12 @@ nav {
    flex-direction: column;
    align-items: center;
 }
+
 #how-to-play {
     margin: 25px 0 0 0;
     width: 86%;
-
 }
+
 .question-number {
     width: 100%;
 }
@@ -220,8 +221,12 @@ nav {
     nav {
         flex-direction: row;
     }
+    #how-to-play {
+        margin: 25px 0 0 0;
+        width: 91.75%;
+    }
     #game-rules-btn, #btn-score-board-header, #reset-btn {
-        margin: 25px 5px;
+        margin: 5px 0;
         padding: 25px;
         border-radius: 10px;
     }
@@ -247,6 +252,14 @@ nav {
 } 
 
 @media screen and (min-width: 992px) {
+    #game-rules-btn, #btn-score-board-header, #reset-btn {
+        margin: 25px;
+        padding: 25px;
+        border-radius: 10px;
+    }
+    #how-to-play {
+        width: 93%;
+    }
     .btn-submit-answer {
         padding: 25px 300px;
     }
@@ -265,6 +278,14 @@ nav {
 } 
 
 @media screen and (min-width: 1200px) {
+    #game-rules-btn, #btn-score-board-header, #reset-btn {
+        margin: 40px;
+        padding: 25px;
+        border-radius: 10px;
+    }
+    #how-to-play {
+        width: 93.7%;
+    }
     .answer-option {
         width: 700px;
     }
