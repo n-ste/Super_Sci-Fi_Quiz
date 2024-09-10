@@ -131,13 +131,9 @@ document.addEventListener("DOMContentLoaded", () => {
         options.classList.remove("disabled");
         submitButton.classList.remove("hide");
         playAgain.classList.add("hide");
-
     }
 
     submitButton.addEventListener("click", nextQuestion);
     scoreBoardButton.addEventListener("click",generateScoreBoard);
     playAgain.addEventListener("click", restart);
-
-
-    
 });
