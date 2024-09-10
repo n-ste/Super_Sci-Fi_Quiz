@@ -1,10 +1,12 @@
 /* Import fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Montserrat&display=swap');
+
 /* General Styles */
 * {
     margin: 0;
     padding: 0;
 }
+
 body {
     background-color: #BCD8C1;
 }
@@ -18,10 +20,12 @@ body {
     height: 170px;
     border-bottom: 5px solid #222e50;
 }
+
 .heading a {
     text-decoration: none;
     color: #bcd8c1;
 }
+
 nav {
     display: flex;
     flex-direction: column;
@@ -30,6 +34,23 @@ nav {
     text-align: center;
     background-color: #BCD8C1;
 }
+
+#submit-username {
+    margin: 0 30%;
+    text-align: center;
+}
+
+#username {
+    margin: auto;
+    padding: 25px 0;
+    /*display: none;*/
+}
+
+#username::placeholder {
+    font-size: 2rem;
+    /*display: none;*/
+}
+
 .score {
     background-color: #e9d985;
     color: #222e50;
@@ -38,12 +59,14 @@ nav {
     border-top: 5px solid #222e50;
     border-bottom: 5px solid #222e50;
 }
+
 #quiz-area {
     border-bottom: 5px solid #222e50;
     display: none;
 }
 
-#quiz-area, #score-board {
+#quiz-area,
+#score-board {
     flex-direction: column;
     align-items: center;
     background-color: #439a86;
@@ -52,15 +75,19 @@ nav {
 #question-area {
     text-align: justify;
 }
+
 #game-instructions {
     margin: auto;
     width: 100%;
 }
+
 #question-area {
     width: 300px;
     margin: 25px;
 }
-#question-area, #game-instructions {
+
+#question-area,
+#game-instructions {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,12 +95,13 @@ nav {
     background-color: #bcd8c1;
     padding: 0 0 20px 0;
     border-radius: 10px;
-    
+
 }
+
 .question-container {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #how-to-play {
@@ -85,7 +113,8 @@ nav {
     width: 100%;
 }
 
-.question-number, #how-to-play {
+.question-number,
+#how-to-play {
     background-color: #222e50;
     font-size: 1.5rem;
     color: #ffffff;
@@ -94,25 +123,39 @@ nav {
     border-top-right-radius: 10px;
 
 }
-.score, .question-number, #game-instructions {
+
+.score,
+.question-number,
+#game-instructions {
     font-family: 'Kanit', sans-serif;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
 }
+
 #answers {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .answer-option {
     margin: 2px;
     background-color: #222e50;
     color: #ffffff;
     border: 2px solid #ffffff;
 }
-#start-btn, .answer-option, .btn-submit-answer, #btn-score-board, #btn-score-board-header, #game-rules-btn, #reset-btn, #play-again-btn {
+
+#start-btn,
+#username-btn,
+.answer-option,
+.btn-submit-answer,
+#btn-score-board,
+#btn-score-board-header,
+#game-rules-btn,
+#reset-btn,
+#play-again-btn {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     font-size: 1em;
@@ -121,34 +164,44 @@ nav {
     width: 250px;
     border-radius: 10px;
 }
+
 .answer-option.correct {
     background-color: #439a86;
     color: #ffffff;
     border: 2px solid #ffffff;
     pointer-events: none;
 }
+
 .answer-option.correct:hover {
     background-color: #ffffff;
     color: #439a86;
     border: 2px solid #439a86;
     pointer-events: none;
 }
+
 .answer-option.incorrect {
     color: #ffffff;
     background-color: #e87070;
     border: 2px solid #ffffff;
     pointer-events: none;
 }
+
 .answer-option.incorrect:hover {
     color: #e87070;
     background-color: #ffffff;
     border: 2px solid #e87070;
     pointer-events: none;
 }
+
 #answers.disabled {
     pointer-events: none;
 }
-#start-btn, .btn-submit-answer, #btn-score-board, #play-again-btn {
+
+#start-btn,
+#username-btn,
+.btn-submit-answer,
+#btn-score-board,
+#play-again-btn {
     margin-bottom: 10px;
     padding: 25px;
     border-radius: 10px;
@@ -156,7 +209,10 @@ nav {
     color: #222e50;
     border: 3px solid #222e50;
 }
-#btn-score-board-header, #game-rules-btn, #reset-btn {
+
+#btn-score-board-header,
+#game-rules-btn,
+#reset-btn {
     margin: 10px;
     padding: 25px;
     border-radius: 10px;
@@ -165,13 +221,15 @@ nav {
     border: 3px solid #222e50;
 }
 
-#btn-score-board-header:hover, #game-rules-btn:hover, #reset-btn:hover {
+#btn-score-board-header:hover,
+#game-rules-btn:hover,
+#reset-btn:hover {
     background-color: #222e50;
     color: #439a86;
     border: 3px solid #439a86;
 }
 
-#play-again-btn { 
+#play-again-btn {
     margin: 15px;
 }
 
@@ -180,19 +238,29 @@ nav {
     color: #222e50;
     border: 2px solid #222e50;
 }
-#start-btn:hover, .btn-submit-answer:hover, #btn-score-board:hover, #play-again-btn:hover {
+
+#start-btn:hover,
+#username-btn:hover,
+.btn-submit-answer:hover,
+#btn-score-board:hover,
+#play-again-btn:hover {
     background-color: #222e50;
     color: #e9d985;
     border: 3px solid #e9d985;
 }
-#start-btn {
+
+#start-btn,
+#username-btn {
     margin: 25px 0;
 }
+
 #instructions-text {
     text-align: justify;
     line-height: 2rem;
 }
-#question, #instructions-text {
+
+#question,
+#instructions-text {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     padding: 50px;
@@ -200,10 +268,12 @@ nav {
     border: 2px solid #222e50;
     border-radius: 10px;
 }
+
 #question {
     text-align: center;
     margin: 25px;
 }
+
 #instructions-text {
     margin: 0 25px;
     border-top-left-radius: 0;
@@ -214,87 +284,120 @@ nav {
 #quiz-ends {
     display: none;
 }
-.hide, #quiz-area.hide {
+
+.hide,
+#quiz-area.hide {
     display: none;
 }
+
 @media screen and (min-width: 768px) {
     nav {
         flex-direction: row;
     }
+
     #how-to-play {
         margin: 25px 0 0 0;
         width: 91.75%;
     }
-    #game-rules-btn, #btn-score-board-header, #reset-btn {
+
+    #game-rules-btn,
+    #btn-score-board-header,
+    #reset-btn {
         margin: 5px 0;
         padding: 25px;
         border-radius: 10px;
     }
+
     .answer-option {
         width: 500px;
     }
+
     #question {
         width: 400px;
     }
-    #question-area, #game-instructions {
+
+    #question-area,
+    #game-instructions {
         width: 600px;
     }
+
     #question-container {
         width: 550px;
     }
+
     .btn-submit-answer {
         padding: 25px 150px;
         width: 100%;
     }
+
     .btn-submit-answer:hover {
         padding: 25px 230px;
     }
-} 
+}
 
 @media screen and (min-width: 992px) {
-    #game-rules-btn, #btn-score-board-header, #reset-btn {
+
+    #game-rules-btn,
+    #btn-score-board-header,
+    #reset-btn {
         margin: 25px;
         padding: 25px;
         border-radius: 10px;
     }
+
     #how-to-play {
         width: 93%;
     }
+
     .btn-submit-answer {
         padding: 25px 300px;
     }
+
     .answer-option {
         width: 600px;
     }
+
     #question {
         width: 490px;
     }
-    #question-area, #game-instructions {
+
+    #question-area,
+    #game-instructions {
         width: 700px;
     }
+
     .question-container {
         width: 650px;
     }
-} 
+}
 
 @media screen and (min-width: 1200px) {
-    #game-rules-btn, #btn-score-board-header, #reset-btn {
+
+    #game-rules-btn,
+    #btn-score-board-header,
+    #reset-btn {
         margin: 40px;
         padding: 25px;
         border-radius: 10px;
     }
+
     #how-to-play {
         width: 93.7%;
     }
+
     .answer-option {
         width: 700px;
     }
+
     #question {
         width: 600px;
     }
-    #question-area, #game-instructions {
+
+    #question-area,
+    #game-instructions {
         width: 800px;
     }
+
     .btn-submit-answer {
         padding: 25px 300px;
     }
@@ -302,4 +405,4 @@ nav {
     .btn-submit-answer:hover {
         padding: 25px 300px;
     }
-} 
+}
