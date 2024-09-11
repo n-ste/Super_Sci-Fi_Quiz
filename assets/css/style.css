@@ -268,7 +268,8 @@ nav {
 .btn-submit-answer:hover,
 #btn-score-board:hover,
 #btn-score-board:hover,
-#play-again-btn:hover {
+#play-again-btn:hover,
+#submit-quiz-results:hover {
     background-color: #222e50;
     color: #e9d985;
     border: 3px solid #e9d985;
@@ -319,7 +320,15 @@ nav {
     nav {
         flex-direction: row;
     }
-
+    #username-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #username-title {
+        width: 80.2%;
+    }
     #how-to-play {
         margin: 25px 0 0 0;
         width: 91.75%;

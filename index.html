@@ -18,65 +18,67 @@
     <header>
         <h1 class="heading"><a href="index.html">Super Sci-Fi Quiz</a></h1>
         <nav>
-                    <button id="game-rules-btn">Game Rules</button>
-                    <button id="btn-score-board-header">Scoreboard</button>
-                    <button id="reset-btn">Reset Game</button></div>
+            <button id="game-rules-btn">Game Rules</button>
+            <button id="btn-score-board-header">Scoreboard</button>
+            <button id="reset-btn">Reset Game</button></div>
             </div>
         </nav>
     </header>
     <!-- Displays the users current score -->
-   <div class="main">
-    <div id="username-container">
-        <h2 id="username-title">Please Submit a Username</h2>
-    <div id="submit-username">
-        <form">
-        <input id="username" type="text" name="username" placeholder=" Username">
-        <button id="username-btn" type="submit">Go</button>
-        </form>
-    </div>
-    </div>
-    <div id="game-instructions">
-        <h2 id="how-to-play">How to Play!</h2>
-        <div id="instructions-text">
-            <p>Hello and welcome to the Super Sci-Fi Quiz. The instructions are simple...</p>
-            <br>
-            <p>Once you press start you'll be asked 10 questions rellating to the sci-fi genre. There will be no time limit, once selected the option you
-            selected will either go green if correct, or red if the answer was incorrect. You won't be able to change your answer. </p> 
-            <br>
-            <p>When answered you'll then need to click on the next button which will take you to the next
-            question. There will be a scoreboard at the end which will let you know how many points you scored, you'll
-            get 1 point for each question you answer correct. Good luck!</p>
-        </div>
-        <button id="start-btn">Start</button></div>
-    </div>
-    <p id="score-header" class="score">Score: <span id="score">0</span></p>
-    <!-- Quiz Area Section -->
-    <div id="quiz-area">
-        <!-- Question Area Section -->
-        <div id="question-area">
-            <!-- Displays the current question number -->
-            <h4 class="question-number">Question <span id="question-number"></span> / 10</h4>
-            <!-- Question Container -->
-            <div class="question-container">
-                <!-- Current Question -->
-                <h3 id="question"></h3>
-            </div>
-            <div id="answers">
-                <!-- Question answer options created through JavaScript -->
+    <div class="main">
+        <div id="username-container">
+            <h2 id="username-title">Please Submit a Username</h2>
+            <div id="submit-username">
+                <form">
+                    <input id="username" type="text" name="username" placeholder=" Username">
+                    <button id="username-btn" type="submit">Go</button>
+                    </form>
             </div>
         </div>
-        <div class="submit-buttons">
-            <!-- Submit Answer Button-->
-            <button class="btn-submit-answer" id="btn-submit-answer">Next</button>
+        <div id="game-instructions">
+            <h2 id="how-to-play">How to Play!</h2>
+            <div id="instructions-text">
+                <p>Hello and welcome to the Super Sci-Fi Quiz. The instructions are simple...</p>
+                <br>
+                <p>Once you press start you'll be asked 10 questions rellating to the sci-fi genre. There will be no
+                    time limit, once selected the option you
+                    selected will either go green if correct, or red if the answer was incorrect. You won't be able to
+                    change your answer. </p>
+                <br>
+                <p>When answered you'll then need to click on the next button which will take you to the next
+                    question. There will be a scoreboard at the end which will let you know how many points you scored,
+                    you'll
+                    get 1 point for each question you answer correct. Good luck!</p>
+            </div>
+            <button id="start-btn">Start</button>
         </div>
-        <button id="submit-quiz-results">Submit</button>
-        <div id="score-board">
-            <p id="score-board-table" class="hide"></p>
+        <p id="score-header" class="score">Score: <span id="score">0</span></p>
+        <!-- Quiz Area Section -->
+        <div id="quiz-area">
+            <!-- Question Area Section -->
+            <div id="question-area">
+                <!-- Displays the current question number -->
+                <h4 class="question-number">Question <span id="question-number"></span> / 10</h4>
+                <!-- Question Container -->
+                <div class="question-container">
+                    <!-- Current Question -->
+                    <h3 id="question"></h3>
+                </div>
+                <div id="answers">
+                    <!-- Question answer options created through JavaScript -->
+                </div>
+            </div>
+            <div class="submit-buttons">
+                <!-- Submit Answer Button-->
+                <button class="btn-submit-answer" id="btn-submit-answer">Next</button>
+            </div>
+            <button id="submit-quiz-results">Submit</button>
+            <div id="score-board">
+                <p id="score-board-table" class="hide"></p>
                 <button id="play-again-btn" class="hide">Play Again</button>
-            <button class="hide" id="btn-score-board">Scoreboard</button>
+            </div>
         </div>
     </div>
-   </div>
     <!-- Links the JavaScript file to the HTML document -->
     <script src="./assets/js/script.js"></script>
 </body>

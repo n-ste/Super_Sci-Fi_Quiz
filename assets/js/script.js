@@ -94,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     function submitUsername() {
         usernameArea.style.display = "none";
-
     }
     myQuestionArray = questionShuffle(myQuestionArray);
     // Help displaying the questions and options for quiz sources from Youtube, credits in README file.
@@ -118,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (questionNo >= questionAllowance - 2) {
             submitButton.style.display = "none";
             submitQuiz.style.display = "inline-block";
-            scoreBoardButton.classList.remove("hide");
         }
 
         if (questionNo >= questionAllowance - 1) {
@@ -129,9 +127,12 @@ document.addEventListener("DOMContentLoaded", () => {
         displayQuestions();
         options.classList.remove("disabled");
     };
+
     function generateScoreBoard() {
+        submitQuiz.style.display = "none";
         quizArea.style.display = "none";
         scoreBoardTable.classList.remove("hide");
+        scoreHeader.style.display = "none";
         scoreBoardButton.classList.add("hide");
         playAgain.classList.remove("hide");
         submitButton.classList.add("hide");
@@ -150,17 +151,19 @@ document.addEventListener("DOMContentLoaded", () => {
         scoreHeader.style.display = "block";
         submitButton.style.display = "inline-block";
         gameInstructions.style.display = "none";
+        usernameArea.style.display = "none";
     }
     function showGameInstructions() {
         gameInstructions.style.display = "flex";
         quizArea.style.display = "none";
         scoreHeader.style.display = "none";
         submitButton.style.display = "none";
+        playAgain.style.display = "none";
+        submitQuiz.style.display = "none";
     }
 
     startButton.addEventListener("click", restart);
     submitButton.addEventListener("click", nextQuestion);
-    scoreBoardButton.addEventListener("click",generateScoreBoard);
     playAgain.addEventListener("click", restart);
     resetGame.addEventListener("click", restart);
     scoreBoardHeader.addEventListener("click", generateScoreBoard);
