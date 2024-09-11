@@ -153,7 +153,6 @@ nav {
 .btn-submit-answer,
 #btn-score-board,
 #btn-score-board-header,
-#btn-score-board-bottom,
 #game-rules-btn,
 #reset-btn,
 #play-again-btn {
@@ -202,7 +201,6 @@ nav {
 #username-btn,
 .btn-submit-answer,
 #btn-score-board,
-#btn-score-board-bottom,
 #play-again-btn {
     margin-bottom: 10px;
     padding: 25px;
@@ -231,8 +229,7 @@ nav {
     border: 3px solid #439a86;
 }
 
-#play-again-btn,
-#btn-score-board-bottom {
+#play-again-btn {
     margin: 15px;
 }
 

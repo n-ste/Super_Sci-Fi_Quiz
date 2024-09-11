@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const gameRules = document.getElementById("game-rules-btn");
     const gameinstructions = document.getElementById("game-instructions");
     const scoreBoardHeader = document.getElementById("btn-score-board-header");
-    const scoreBoardBottom = document.getElementById("btn-score-board-bottom");
     let scoreBoardTable = document.getElementById("score-board-table");
     let questionNumber = document.getElementById("question-number");
     let questionNo = 0;
@@ -129,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
         scoreBoardTable.classList.remove("hide");
         scoreBoardButton.classList.add("hide");
         playAgain.classList.remove("hide");
-        scoreBoardBottom.classList.remove("hide");
         submitButton.classList.add("hide");
     };
 
@@ -142,8 +140,12 @@ document.addEventListener("DOMContentLoaded", () => {
         options.classList.remove("disabled");
         submitButton.classList.remove("hide");
         playAgain.classList.add("hide");
-        scoreBoardBottom.classList.add("hide");
         game.style.display = "flex";
+        gameinstructions.style.display = "none";
+    }
+    function showGameInstructions() {
+        gameinstructions.style.display = "block";
+        quizArea.style.display = "none";
     }
 
     startButton.addEventListener("click", submitUsername);
@@ -152,6 +154,5 @@ document.addEventListener("DOMContentLoaded", () => {
     playAgain.addEventListener("click", restart);
     resetGame.addEventListener("click", restart);
     scoreBoardHeader.addEventListener("click", generateScoreBoard);
-    scoreBoardBottom.addEventListener("click", generateScoreBoard);
-
+    gameRules.addEventListener("click", showGameInstructions);
 });
