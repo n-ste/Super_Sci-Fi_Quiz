@@ -166,4 +166,5 @@ document.addEventListener("DOMContentLoaded", () => {
     scoreBoardHeader.addEventListener("click", generateScoreBoard);
     gameRules.addEventListener("click", showGameInstructions);
     usernameButton.addEventListener("click", submitUsername);
+    submitQuiz.addEventListener("click", generateScoreBoard);
 });
