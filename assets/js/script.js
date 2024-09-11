@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const submitButton = document.querySelector(".submit-buttons .btn-submit-answer");
     const scoreBoardButton = document.getElementById("btn-score-board");
     const usernameButton = document.getElementById("username-btn");
-    const usernameArea = document.getElementById("submit-username");
+    const usernameArea = document.getElementById("username-container");
     const playAgain = document.getElementById("play-again-btn");
     const resetGame = document.getElementById("reset-btn");
     const game = document.getElementById("quiz-area");
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function nextQuestion() {
         if (questionNo >= questionAllowance - 2) {
-            submitButton.classList.add("hide");
+            submitButton.style.display = "none";
             scoreBoardButton.classList.remove("hide");
         }
 
@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         game.style.display = "flex";
         scoreHeader.style.display = "block";
         submitButton.style.display = "inline-block";
+        gameInstructions.style.display = "none";
     }
     function showGameInstructions() {
         gameInstructions.style.display = "flex";
