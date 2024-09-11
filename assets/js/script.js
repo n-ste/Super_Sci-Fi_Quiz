@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const scoreBoardButton = document.getElementById("btn-score-board");
     const usernameButton = document.getElementById("username-btn");
     const usernameArea = document.getElementById("username-container");
+    const submitQuiz = document.getElementById("submit-quiz-results");
     const playAgain = document.getElementById("play-again-btn");
     const resetGame = document.getElementById("reset-btn");
     const game = document.getElementById("quiz-area");
@@ -116,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function nextQuestion() {
         if (questionNo >= questionAllowance - 2) {
             submitButton.style.display = "none";
+            submitQuiz.style.display = "inline-block";
             scoreBoardButton.classList.remove("hide");
         }
 

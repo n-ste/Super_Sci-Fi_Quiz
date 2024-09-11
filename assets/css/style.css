@@ -174,6 +174,7 @@ nav {
 .btn-submit-answer,
 #btn-score-board,
 #btn-score-board-header,
+#submit-quiz-results,
 #game-rules-btn,
 #reset-btn,
 #play-again-btn {
@@ -216,10 +217,13 @@ nav {
 #answers.disabled {
     pointer-events: none;
 }
-
+#submit-quiz-results {
+    display: none;
+}
 #start-btn,
 #username-btn,
 .btn-submit-answer,
+#submit-quiz-results,
 #btn-score-board,
 #play-again-btn {
     margin-bottom: 10px;
