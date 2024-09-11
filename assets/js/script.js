@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const game = document.getElementById("quiz-area");
     const startButton = document.getElementById("start-btn");
     const gameRules = document.getElementById("game-rules-btn");
-    const gameinstructions = document.getElementById("game-instructions");
+    const gameInstructions = document.getElementById("game-instructions");
     const scoreBoardHeader = document.getElementById("btn-score-board-header");
     let scoreBoardTable = document.getElementById("score-board-table");
     let questionNumber = document.getElementById("question-number");
@@ -92,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return array.slice().sort(() => Math.random() - 0.5);
     };
     function submitUsername() {
-        gameinstructions.style.display = "flex";
         usernameArea.style.display = "none";
 
     }
@@ -146,12 +145,11 @@ document.addEventListener("DOMContentLoaded", () => {
         submitButton.classList.remove("hide");
         playAgain.classList.add("hide");
         game.style.display = "flex";
-        gameinstructions.style.display = "none";
         scoreHeader.style.display = "block";
         submitButton.style.display = "inline-block";
     }
     function showGameInstructions() {
-        gameinstructions.style.display = "flex";
+        gameInstructions.style.display = "flex";
         quizArea.style.display = "none";
         scoreHeader.style.display = "none";
         submitButton.style.display = "none";
