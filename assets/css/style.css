@@ -51,6 +51,9 @@ nav {
     /*display: none;*/
 }
 
+#score-header {
+    display: none;
+}
 .score {
     background-color: #e9d985;
     color: #222e50;
@@ -76,10 +79,6 @@ nav {
     text-align: justify;
 }
 
-#game-instructions {
-    margin: auto;
-    width: 100%;
-}
 
 #question-area {
     width: 300px;
@@ -95,7 +94,12 @@ nav {
     background-color: #bcd8c1;
     padding: 0 0 20px 0;
     border-radius: 10px;
+}
 
+#game-instructions {
+    margin: auto;
+    width: 100%;
+    display: none;
 }
 
 .question-container {

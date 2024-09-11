@@ -56,8 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const quizArea = document.getElementById("question-area");
     const question = document.getElementById("question");
     const options = document.getElementById("answers");
+    const scoreHeader = document.getElementById("score-header");
     const submitButton = document.querySelector(".submit-buttons .btn-submit-answer");
     const scoreBoardButton = document.getElementById("btn-score-board");
+    const usernameButton = document.getElementById("username-btn");
+    const usernameArea = document.getElementById("submit-username");
     const playAgain = document.getElementById("play-again-btn");
     const resetGame = document.getElementById("reset-btn");
     const game = document.getElementById("quiz-area");
@@ -89,7 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return array.slice().sort(() => Math.random() - 0.5);
     };
     function submitUsername() {
-        gameinstructions.style.display = "none";
+        gameinstructions.style.display = "flex";
+        usernameArea.style.display = "none";
+
     }
     myQuestionArray = questionShuffle(myQuestionArray);
     // Help displaying the questions and options for quiz sources from Youtube, credits in README file.
@@ -142,17 +147,22 @@ document.addEventListener("DOMContentLoaded", () => {
         playAgain.classList.add("hide");
         game.style.display = "flex";
         gameinstructions.style.display = "none";
+        scoreHeader.style.display = "block";
+        submitButton.style.display = "inline-block";
     }
     function showGameInstructions() {
-        gameinstructions.style.display = "block";
+        gameinstructions.style.display = "flex";
         quizArea.style.display = "none";
+        scoreHeader.style.display = "none";
+        submitButton.style.display = "none";
     }
 
-    startButton.addEventListener("click", submitUsername);
+    startButton.addEventListener("click", restart);
     submitButton.addEventListener("click", nextQuestion);
     scoreBoardButton.addEventListener("click",generateScoreBoard);
     playAgain.addEventListener("click", restart);
     resetGame.addEventListener("click", restart);
     scoreBoardHeader.addEventListener("click", generateScoreBoard);
     gameRules.addEventListener("click", showGameInstructions);
+    usernameButton.addEventListener("click", submitUsername);
 });

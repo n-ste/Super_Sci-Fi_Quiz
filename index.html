@@ -18,8 +18,6 @@
     <header>
         <h1 class="heading"><a href="index.html">Super Sci-Fi Quiz</a></h1>
         <nav>
-            <div class="bars-show">
-                <div class="hi.de">
                     <button id="game-rules-btn">Game Rules</button>
                     <button id="btn-score-board-header">Scoreboard</button>
                     <button id="reset-btn">Reset Game</button></div>
@@ -27,7 +25,13 @@
         </nav>
     </header>
     <!-- Displays the users current score -->
-    <p class="score">Score: <span id="score">0</span></p>
+   <div class="main">
+    <div id="submit-username">
+        <form">
+        <input id="username" type="text" name="username" placeholder=" Username">
+        <button id="username-btn" type="submit">Go</button>
+        </form>
+    </div>
     <div id="game-instructions">
         <h2 id="how-to-play">How to Play!</h2>
         <div id="instructions-text">
@@ -42,12 +46,7 @@
         </div>
         <button id="start-btn">Start</button></div>
     </div>
-    <div id="submit-username">
-        <form">
-        <input id="username" type="text" name="username" placeholder=" Username">
-        <button id="username-btn" type="submit">Go</button>
-        </form>
-    </div>
+    <p id="score-header" class="score">Score: <span id="score">0</span></p>
     <!-- Quiz Area Section -->
     <div id="quiz-area">
         <!-- Question Area Section -->
@@ -73,6 +72,7 @@
             <button class="hide" id="btn-score-board">Scoreboard</button>
         </div>
     </div>
+   </div>
     <!-- Links the JavaScript file to the HTML document -->
     <script src="./assets/js/script.js"></script>
 </body>
