@@ -105,7 +105,7 @@ Like with the fonts I didn't want to have too many colours but wanted enough for
 
 #### Instructions Page
 
-![Instructions Page](./assets/docs/)
+![Instructions Page](./assets/docs/game-instructions.png)
 
 * I decided to start the project by incorporating an area to explain the rules of the game. This feaured a box explaining the scoring system and what the feedback the user will recieve when they answer correctly and incorrectly.
 
