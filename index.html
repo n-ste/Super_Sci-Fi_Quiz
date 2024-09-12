@@ -26,7 +26,7 @@
     </header>
     <!-- Displays the users current score -->
     <div class="main">
-        <div id="username-container">
+        <div id="username-container" class="hide">
             <h2 id="username-title">Please Submit a Username</h2>
             <div id="submit-username">
                 <form">
@@ -74,8 +74,9 @@
             </div>
             <button id="submit-quiz-results">Submit</button>
             <div id="score-board">
-                <p id="score-board-table" class="hide">
-                    <p><span id="user-input-name"></span></p>
+                <p id="score-board-table">
+                    <h2 id="user-input-heading">Thanks for completing the quiz!</h2>
+                    <span id="user-input-name"></span>
                 </p>
                 <button id="play-again-btn" class="hide">Play Again</button>
             </div>

@@ -37,6 +37,7 @@ nav {
 #username-container {
     margin: 25px;
 }
+
 #submit-username {
     padding: 15px;
     text-align: center;
@@ -82,7 +83,6 @@ nav {
 }
 
 #quiz-area {
-    border-bottom: 5px solid #222e50;
     display: none;
 }
 
@@ -135,7 +135,8 @@ nav {
 }
 
 .question-number,
-#how-to-play {
+#how-to-play, 
+#user-input-heading {
     background-color: #222e50;
     font-size: 1.5rem;
     color: #ffffff;
@@ -145,9 +146,21 @@ nav {
     padding: 31px 0;
 }
 
+
+#user-input-name {
+    display: block;
+    padding: 50px;
+    background-color: #ffffff;
+    border: 2px solid #222e50;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 .score,
 .question-number,
-#game-instructions {
+#game-instructions,
+#user-input-heading,
+#user-input-name {
     font-family: 'Kanit', sans-serif;
     font-weight: 700;
     text-align: center;
@@ -275,6 +288,11 @@ nav {
     border: 3px solid #e9d985;
 }
 
+#score-board {
+    display: none;
+    width: 86%;
+}
+
 #start-btn,
 #username-btn {
     margin: 25px 0;
@@ -325,6 +343,8 @@ nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 20px 20%;
+
     }
     #username-title {
         width: 80.2%;

@@ -58,9 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const options = document.getElementById("answers");
     const scoreHeader = document.getElementById("score-header");
     const submitButton = document.querySelector(".submit-buttons .btn-submit-answer");
-    const scoreBoardButton = document.getElementById("btn-score-board");
-    const usernameButton = document.getElementById("username-btn");
     const usernameArea = document.getElementById("username-container");
+    const usernameSubmit = document.getElementById("username-btn");
     const submitQuiz = document.getElementById("submit-quiz-results");
     const playAgain = document.getElementById("play-again-btn");
     const resetGame = document.getElementById("reset-btn");
@@ -69,12 +68,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const gameRules = document.getElementById("game-rules-btn");
     const gameInstructions = document.getElementById("game-instructions");
     const scoreBoardHeader = document.getElementById("btn-score-board-header");
-    let scoreBoardTable = document.getElementById("score-board-table");
+    let scoreBoard = document.getElementById("score-board");
     let questionNumber = document.getElementById("question-number");
     let displayedUserName = document.getElementById("user-input-name");
-    let playerName = document.getElementById("username");
     let questionNo = 0;
     let currentUserScore = 0;
+
+    showGameInstructions();
 
     const verifyAnswer = (e) => {
         let selectedAnswer = e.target.textContent;
@@ -94,9 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const questionShuffle = (array) => {
         return array.slice().sort(() => Math.random() - 0.5);
     };
-   // function submitUsername() {
-       // usernameArea.style.display = "none";
-   // }
+ 
     myQuestionArray = questionShuffle(myQuestionArray);
     // Help displaying the questions and options for quiz sources from Youtube, credits in README file.
     const displayQuestions = () => {;
@@ -133,17 +131,23 @@ document.addEventListener("DOMContentLoaded", () => {
     function displayScore() {
         let finalScore = currentUserScore;
         displayedUserName.innerHTML = username.value + " Scored " + finalScore + "/10";
+        scoreBoard.style.display = "block";
+    };
+
+    function supplyUsername() {
+        usernameArea.style.display= "block";
+        submitQuiz.style.display = "none";
+        quizArea.style.display = "none";
+        scoreHeader.style.display = "none";
     };
 
     function generateScoreBoard() {
-        submitQuiz.style.display = "none";
-        quizArea.style.display = "none";
-        usernameArea.style.display = "inline-block";
-        scoreBoardTable.classList.remove("hide");
-        scoreHeader.style.display = "none";
+        scoreBoard.classList.remove("hide");
         playAgain.classList.remove("hide");
         submitButton.classList.add("hide");
+        usernameArea.style.display = "none";
         displayScore();
+
     };
 
     function restart() {
@@ -168,6 +172,8 @@ document.addEventListener("DOMContentLoaded", () => {
         submitButton.style.display = "none";
         playAgain.style.display = "none";
         submitQuiz.style.display = "none";
+        usernameArea.style.display = "none";
+
     }
 
     startButton.addEventListener("click", restart);
@@ -176,6 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resetGame.addEventListener("click", restart);
     scoreBoardHeader.addEventListener("click", generateScoreBoard);
     gameRules.addEventListener("click", showGameInstructions);
-    submitQuiz.addEventListener("click", generateScoreBoard);
+    submitQuiz.addEventListener("click", supplyUsername);
+    usernameSubmit.addEventListener("click", generateScoreBoard);
     
 });
