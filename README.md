@@ -125,25 +125,28 @@ As we're using Github to deploy the site we'll do this through pages.
 
 1. First, you'll go to [Github](https://github.com)
 2. Then you'll need to find the correct repository, for this project it will be [Super Sci-Fi Quiz](https://n-ste.github.io/Super_Sci-Fi_Quiz/)
-3. You'll then go to the [settings]() page at the top of the screen.
+3. You'll then go to the [settings](./assets/docs/deploy-settings.png) page at the top of the screen.
 
-4. When on the settings page there will be a [sidebar]() on the left of the screen, click the link that says "Pages"
+4. When on the settings page there will be a [sidebar](./assets/docs/deployment-sidebar.png) on the left of the screen, click the link that says "Pages"
 5. Now at the top of the page you'll want to select the option to "Deploy page from branch"
-6. Select the ["main" branch from the"/root"]() file and click save.
-7. The [site will now be ready]() to be deployed.
+6. Select the ["main" branch from the"/root"](./assets/docs/depoyment-from-branch.png) file and click save.
+7. The [site will now be ready](./assets/docs/deployment-live.png) to be deployed.
 
 ## Local Development
 
 ### How to Fork
 
 1. To fork the repository you'll first need to go to [Super Sci-Fi Quiz](https://n-ste.github.io/Super_Sci-Fi_Quiz/)
-2. At the top of the page there will be a button that says ["Fork"](), click on this.
+2. At the top of the page there will be a button that says ["Fork"](./assets/docs/fork-icon.png), click on this.
+3. When on this page, there will be a heading that says "Create a new fork", you should now select a new repository name.
+4. After this, you should go to the bottom of the page and there will be a button that says ["create fork".](/assets/docs/how-to-clone.png)
+5. You should then be led to a page that looks like the original repository and the the project has been successfully forked.
 
 ### How to Clone
 
 1. To clone the repository first you'd need to visit the [repository page.](https://n-ste.github.io/Super_Sci-Fi_Quiz/)
 
-2. You'd then click the green button that says ["Code"](), this should open a box which will say "Clone" on it. Copy the Link that appears.
+2. You'd then click the green button that says ["Code"](./assets/docs/how-to-clone.png), this should open a box which will say "Clone" on it. Copy the Link that appears.
 
 3. Then you can go to your terminal and type "git clone (paste in the link that you copied earlier) and you should have successfully cloned the repository.
 
