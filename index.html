@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="sci-fi quiz">
+    <meta name="keywords" content="Star Wars, Star Trek, Marvel, Dune, Stranger Things, The Last of Us, Alien, Doctor Who">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon Soucred: Favicon.io -->
     <link rel="icon" sizes="favicon-32x32" href="./assets/images/favicon-32x32.png">
@@ -17,13 +19,13 @@
     <!-- Main Page Heading-->
     <header>
         <!-- Title Heading-->
-        <h1 class="heading"><a href="index.html">Super Sci-Fi Quiz</a></h1>
+        <h1 class="heading"><a href="index.html" aria-label="Super Sci-Fi Quiz">Super Sci-Fi Quiz</a></h1>
         <!-- Navigation Container -->
         <nav>
             <!-- Game Rules Button -->
-            <button id="game-rules-btn">Game Rules</button>
+            <button id="game-rules-btn" aria-label="game rules button">Game Rules</button>
             <!-- Reset Button -->
-            <button id="reset-btn">Reset Game</button></div>
+            <button id="reset-btn" aria-label="reset button">Reset Game</button></div>
             </div>
         </nav>
     </header>
@@ -39,18 +41,18 @@
                 <!-- Form for the Username Text Box and Submit Button -->
                 <form">
                 <!-- Username Text Box -->
-                    <input id="username" type="text" name="username" required pattern=".*\S+.*" placeholder=" Username">
+                    <input id="username" type="text" name="username" required pattern=".*\S+.*" placeholder=" Username" aria-label="username text field">
                     <!-- Username Submit Button -->
-                    <button id="username-btn" type="submit">Go</button>
+                    <button id="username-btn" type="submit" aria-label="submit button">Go</button>
                     </form>
             </div>
         </div>
         <!-- Game Instructions Container -->
         <div id="game-instructions">
             <!-- Game Instructions Heading -->
-            <h2 id="how-to-play">How to Play!</h2>
+            <h2 id="how-to-play" aria-label="how to play">How to Play!</h2>
             <!-- Game Instructions Text Content-->
-            <div id="instructions-text">
+            <div id="instructions-text" aria-label="game instructions">
                 <p>Hello and welcome to the Super Sci-Fi Quiz. The instructions are simple...</p>
                 <br>
                 <p>Once you press start you'll be asked 10 questions rellating to the sci-fi genre. There will be no
@@ -64,43 +66,43 @@
                     get 1 point for each question you answer correct. Good luck!</p>
             </div>
             <!-- Star Game Button -->
-            <button id="start-btn">Start</button>
+            <button id="start-btn" aria-label="start game">Start</button>
         </div>
         <!-- Score Header-->
-        <p id="score-header" class="score">Score: <span id="score">0</span></p>
+        <p id="score-header" class="score">Score: <span id="score" aria-label="score">0</span></p>
         <!-- Quiz Area Section -->
         <div id="quiz-area">
             <!-- Question Area Section -->
             <div id="question-area">
                 <!-- Displays the current question number -->
-                <h4 class="question-number">Question <span id="question-number"></span> / 10</h4>
+                <h4 class="question-number" aria-label="question number">Question <span id="question-number"></span> / 10</h4>
                 <!-- Question Container -->
                 <div class="question-container">
                     <!-- Current Question -->
-                    <h3 id="question"></h3>
+                    <h3 id="question" aria-label="question"></h3>
                 </div>
                 <!-- Question Answer Options Container -->
-                <div id="answers">
+                <div id="answers" aria-label="options">
                     <!-- Question answer options created through JavaScript -->
                 </div>
             </div>
             <!-- Submit Buttons Container -->
             <div class="submit-buttons">
                 <!-- Submit Answer Button-->
-                <button class="btn-submit-answer" id="btn-submit-answer">Next</button>
+                <button class="btn-submit-answer" id="btn-submit-answer" aria-label="submit answer">Next</button>
             </div>
             <!-- Quiz Results Submission Button -->
-            <button id="submit-quiz-results">Submit</button>
+            <button id="submit-quiz-results" aria-label="submit">Submit</button>
             <!-- Score Board Container -->
             <div id="score-board">
                 <p id="score-board-table">
                     <!-- Score Board Heading -->
-                    <h2 id="user-input-heading">Thanks for completing the quiz!</h2>
+                    <h2 id="user-input-heading" aria-label="thanks for completing the quiz!">Thanks for completing the quiz!</h2>
                     <!-- Submit Name for Quiz Score -->
-                    <span id="user-input-name"></span>
+                    <span id="user-input-name" aria-label="please submit you name to get your results"></span>
                 </p>
                 <!-- Play Again Buttom -->
-                <button id="play-again-btn" class="hide">Play Again</button>
+                <button id="play-again-btn" class="hide" aria-label="play again">Play Again</button>
             </div>
         </div>
     </div>
