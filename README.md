@@ -27,12 +27,10 @@
 * [Testing](#testing)
   * [HTML Validation](#html-validation)
   * [CSS Validation](#css-validation)
-  * [JavaScript Validation] (#javascript-validation)
+  * [JavaScript Validation](#javascript-validation)
   * [Bugs](#bugs)
   * [Resolutions](#resolutions)
   * [Known Bugs](#known-bugs)
-    * [All Pages - Mobile](#all-pages---mobile)
-    * [All Pages - Desktop](#all-pages---desktop)
 
 * [Credits](#credits)
   * [Code](#code)
@@ -154,33 +152,62 @@ As we're using Github to deploy the site we'll do this through pages.
 
 ### HTML Validation
 
-* [Home Page HTML]()
+![Home Page HTML](./assets/docs/html-validation.png)
+
+* One error appeared when I validated the HTML code through W3. This was due to a heading being present in the HTML file without any content.
 
 ### CSS Validation
 
-* [Stylesheet]()
+![Stylesheet](./assets/docs/css-validation.png)
 
-### JavaScript Validation
+* There were no errors that came up when I validated my CSS file through W3 Jigsaw. However, there was one warning stating that "Imported style sheets are not checked in direct input and file upload modes."
 
-* [JavaScript]()
+### Javascript Validation
+
+* [Java Script]()
 
 ### Bugs
 
 ### Resolutions
 
+#### HTML
+
+* No issues to be resolved with the HTML file. Though this heading is empty, this will later be added through the use of JavaScript functions. No further changes required.
+
+#### CSS
+
+* No issues were found with the CSS file. However, there was a warning issued stating "Imported style sheets are not checked in direct input and file upload modes." After researching into this I discovered this is nothing to worry about and more of a declaration.
+
+#### JavaScript
+
 ### Known Bugs
 
-#### All Pages - Mobile
+* HTML
+  * Empty heading on line 83, this will later have content added through JavaScript and therefore no further action is required.
 
-#### All Pages - Desktop
+* CSS
+  * 1 warning was found stating "Imported style sheets are not checked in direct input and file upload modes." But after researching this found there is nothing of concern with this and no amendments are required.
 
 ## Credits
 
 ### Code
 
+* [Youtube -  Build A Quiz Website Using HTML, CSS & JavaScript (Part 2) - Live Blogger](https://n-ste.github.io/Super_Sci-Fi_Quiz/)
+  * I used the above video to aid me in trying to figure out a way to pull my questions and answers from the array to be displayed when their function was called.
+
+* [SweetAlert2](https://sweetalert2.github.io/)
+  * I used SweetAlert to change the format of the alert box that popped up if the user gets the incorrect answer in the quiz and when they try to submit their username with whitespace.
+
+* [StackOverflow](https://stackoverflow.com/questions/1151032/javascript-blank-space-validation)
+  * I used the link above to help me figure out a way to prevent the user from submitting their score by using white space.
+
 ### Content
 
+* [Kwizzbit - 50 Sci-Fi Quiz Questions and Answers](https://kwizzbit.com/sci-fi-quiz-questions-and-answers/)
+
 ### Media
+
+* No media was used in this project.
 
 ### Acknowledgements
 
