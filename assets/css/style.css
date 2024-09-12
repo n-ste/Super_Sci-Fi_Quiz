@@ -7,10 +7,12 @@
     padding: 0;
 }
 
+/* Styles for the body element */
 body {
     background-color: #439a86;
 }
 
+/* Styles for the main page heading */
 .heading {
     font-family: 'Kanit', sans-serif;
     font-size: 3rem;
@@ -21,11 +23,13 @@ body {
     border-bottom: 5px solid #222e50;
 }
 
+/* Stles for the page heading link */
 .heading a {
     text-decoration: none;
     color: #bcd8c1;
 }
 
+/* Styles for the navigation section */
 nav {
     display: flex;
     flex-direction: column;
@@ -35,10 +39,13 @@ nav {
     background-color: #BCD8C1;
     border-bottom: 5px solid #222e50;
 }
+
+/* Styles for the username input section */
 #username-container {
     margin: 25px;
 }
 
+/* Styles for the username submit button */
 #submit-username {
     padding: 15px;
     text-align: center;
@@ -49,6 +56,8 @@ nav {
     width: 80%;
     padding: 30px;
 }
+
+/* Styles for the username title */
 #username-title {
     text-align: center;
     background-color: #222e50;
@@ -61,19 +70,25 @@ nav {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+/* Styles for the username text field */
 #username {
     padding: 25px 0;
     width: 250px;
 }
 
+/* Styles for the placeholder text in the username text field */
 #username::placeholder {
     font-size: 2rem;
     /*display: none;*/
 }
 
+/* Styles fo the score header */
 #score-header {
     display: none;
 }
+
+/* Styles for the score class */
 .score {
     background-color: #e9d985;
     color: #222e50;
@@ -82,10 +97,12 @@ nav {
     border-bottom: 5px solid #222e50;
 }
 
+/* Styles for the quiz area container */
 #quiz-area {
     display: none;
 }
 
+/* Styles for the quiz area and score board section */
 #quiz-area,
 #score-board {
     flex-direction: column;
@@ -93,17 +110,15 @@ nav {
     background-color: #439a86;
 }
 
-#question-area {
-    text-align: justify;
-}
-
-
+/* Styles for the question area */
 #question-area {
     width: 300px;
     margin: 25px;
     background-color: #BCD8C1;
+    text-align: justify;
 }
 
+/* Styles for the question area and game instructions */
 #question-area,
 #game-instructions {
     display: flex;
@@ -114,28 +129,33 @@ nav {
     border-radius: 10px;
 }
 
+/* Styles for the game instructions */
 #game-instructions {
     margin: auto;
     width: 100%;
 }
 
+/* Styles for the question container */
 .question-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Styles for the game instructions heading */
 #how-to-play {
     margin: 25px 0 0 0;
     width: 86%;
 }
 
+/* Styles for the question number title */
 .question-number {
     width: 100%;
 }
 
+/* Styles for the question number heading, game instructions heading and score board heading */
 .question-number,
-#how-to-play, 
+#how-to-play,
 #user-input-heading {
     background-color: #222e50;
     font-size: 1.5rem;
@@ -146,7 +166,7 @@ nav {
     padding: 31px 0;
 }
 
-
+/* Styles for the overall score value in the score board section */
 #user-input-name {
     display: block;
     padding: 50px;
@@ -156,6 +176,7 @@ nav {
     border-bottom-right-radius: 10px;
 }
 
+/* Styles for score heading section, question number heading, score board heading and score board results */
 .score,
 .question-number,
 #game-instructions,
@@ -167,6 +188,7 @@ nav {
     text-transform: uppercase;
 }
 
+/* Styles for the quiz answer options container */
 #answers {
     display: flex;
     flex-direction: column;
@@ -174,6 +196,7 @@ nav {
     justify-content: center;
 }
 
+/* Styles for the quiz answer options  */
 .answer-option {
     margin: 2px;
     background-color: #222e50;
@@ -181,6 +204,7 @@ nav {
     border: 2px solid #ffffff;
 }
 
+/* Styles for main element buttons */
 #start-btn,
 #username-btn,
 .answer-option,
@@ -199,6 +223,8 @@ nav {
     width: 250px;
     border-radius: 10px;
 }
+
+/* Styles for when the answer option is correct */
 .answer-option.correct {
     background-color: #439a86;
     color: #ffffff;
@@ -206,6 +232,7 @@ nav {
     pointer-events: none;
 }
 
+/* Styles for when the answer option is correct and hovered over */
 .answer-option.correct:hover {
     background-color: #ffffff;
     color: #439a86;
@@ -213,6 +240,7 @@ nav {
     pointer-events: none;
 }
 
+/* Styles for when the answer option is incorrect  */
 .answer-option.incorrect {
     color: #ffffff;
     background-color: #e87070;
@@ -220,6 +248,7 @@ nav {
     pointer-events: none;
 }
 
+/* Styles for when the answer option is incorrect and hovered over */
 .answer-option.incorrect:hover {
     color: #e87070;
     background-color: #ffffff;
@@ -227,12 +256,17 @@ nav {
     pointer-events: none;
 }
 
+/* Styles for when an answer has been selected to disable the other options */
 #answers.disabled {
     pointer-events: none;
 }
+
+/* Styles to hide the quiz results area */
 #submit-quiz-results {
     display: none;
 }
+
+/* Styles for buttons in the main container */
 #start-btn,
 #username-btn,
 .btn-submit-answer,
@@ -246,9 +280,13 @@ nav {
     color: #222e50;
     border: 3px solid #222e50;
 }
+
+/* Styles for the play agian button */
 #play-again-btn {
     margin: 15px 190px;
 }
+
+/* Styles for the buttons in the nav container */
 #btn-score-board-header,
 #game-rules-btn,
 #reset-btn {
@@ -260,6 +298,7 @@ nav {
     border: 3px solid #222e50;
 }
 
+/* Styles for the user hovers over the buttons in the nav container */
 #btn-score-board-header:hover,
 #game-rules-btn:hover,
 #reset-btn:hover {
@@ -268,21 +307,22 @@ nav {
     border: 3px solid #439a86;
 }
 
+/* Styles for margin of the play agian button */
 #play-again-btn {
     margin: 15px;
 }
 
+/* Styles for when you hover over the answer options */
 .answer-option:hover {
     background-color: #ffffff;
     color: #222e50;
     border: 2px solid #222e50;
 }
 
+/* Styles for when you hover over the start button, username submit button, play agian button and sumbit quiz results button */
 #start-btn:hover,
 #username-btn:hover,
 .btn-submit-answer:hover,
-#btn-score-board:hover,
-#btn-score-board:hover,
 #play-again-btn:hover,
 #submit-quiz-results:hover {
     background-color: #222e50;
@@ -290,22 +330,25 @@ nav {
     border: 3px solid #e9d985;
 }
 
+/* Styles for the score board container */
 #score-board {
     display: none;
     width: 86%;
     margin: 20px;
 }
 
+/* Styles for the start button and username submission button */
 #start-btn,
 #username-btn {
     margin: 25px 0;
 }
-
+/* Styles for the text area of the game instructions */
 #instructions-text {
     text-align: justify;
     line-height: 2rem;
 }
 
+/* Styles for the question text area and instructuons text area */
 #question,
 #instructions-text {
     font-family: 'Montserrat', sans-serif;
@@ -315,12 +358,13 @@ nav {
     border: 2px solid #222e50;
     border-radius: 10px;
 }
-
+/* Styles to align the question text in the center */
 #question {
     text-align: center;
     margin: 25px;
 }
 
+/* Styles for the instructions text area */
 #instructions-text {
     margin: 0 25px;
     border-top-left-radius: 0;
@@ -328,19 +372,19 @@ nav {
 
 }
 
-#quiz-ends {
-    display: none;
-}
-
+/* Styles for when the hide class is added to and element to hide it's content */
 .hide,
 #quiz-area.hide {
     display: none;
 }
-
+ /* Styles to adjust the screen display on tablet screens */
 @media screen and (min-width: 768px) {
+    /* Styles for the nav container for tablet devices */
     nav {
         flex-direction: row;
     }
+
+    /* Styles for the username container for tablet devices */
     #username-container {
         display: flex;
         flex-direction: column;
@@ -349,123 +393,139 @@ nav {
         margin: 20px 20%;
 
     }
+    /* Styles for the username title on tablet devices */
     #username-title {
         width: 80.2%;
     }
+
+    /* Styles for the game instructions title for tablet devices */
     #how-to-play {
         margin: 25px 0 0 0;
         width: 91.75%;
     }
 
+    /* Styles for the buttons in the nav container for tablet devices */
     #game-rules-btn,
-    #btn-score-board-header,
     #reset-btn {
         margin: 5px 0;
         padding: 25px;
         border-radius: 10px;
     }
-
+    /* Styles to set the width of the answer option for tablet devices */
     .answer-option {
         width: 500px;
     }
 
+    /* Styles to set the width of the question text area for tablet devices */
     #question {
         width: 400px;
     }
 
+    /* Styles for the question area and gane instructions containers for tablet devices */
     #question-area,
     #game-instructions {
         width: 600px;
     }
 
+    /* Styles to set the width for the question container on tablet devices */
     #question-container {
         width: 550px;
     }
-
+    /* Styles for the next question button on tablet devices */
     .btn-submit-answer {
         padding: 25px 150px;
         width: 100%;
     }
 
+    /* Styles for when the next question button is hovered over on tablet devices*/
     .btn-submit-answer:hover {
         padding: 25px 230px;
     }
 
+    /* Styles for the play again button on tablet devices */
     #play-again-btn {
         margin: 10px 30%;
     }
 }
 
+/* Styles for laptop screens */
 @media screen and (min-width: 992px) {
 
+    /* Styles for the buttons in the nav container for laptop screens */
     #game-rules-btn,
-    #btn-score-board-header,
     #reset-btn {
         margin: 25px;
         padding: 25px;
         border-radius: 10px;
     }
 
+    /* Styles for the game instructions heading for laptop screens */
     #how-to-play {
         width: 93%;
     }
 
+    /* Styles for the padding on answer submit buttons for laptop screens */
     .btn-submit-answer {
         padding: 25px 300px;
     }
+    /* Styles for when the user hovers over the padding on answer submit buttons for laptop screens */
     .btn-submit-answer:hover {
         padding: 25px 300px;
     }
 
+    /* Styles for the width of the answer option button on laptop devices */
     .answer-option {
         width: 600px;
     }
 
+    /* Styles for the width of the question text area on laptop devices */
     #question {
         width: 490px;
     }
 
+    /* Styles for the quiz area and game instructions containers on laptop screens */
     #question-area,
     #game-instructions {
         width: 700px;
     }
 
+    /* Styles for the width of the question container for laptop screens */
     .question-container {
         width: 650px;
     }
-
+    /* Styles for the margin on the play again button on laptop screens */
     #play-again-btn {
         margin: 10px 35%;
     }
 }
 
+/* Styles for desktop screens */
 @media screen and (min-width: 1200px) {
-
+    /* Styles for the nav container buttons on desktop screens */
     #game-rules-btn,
-    #btn-score-board-header,
     #reset-btn {
         margin: 40px;
         padding: 25px;
         border-radius: 10px;
     }
-
+    /* Styles for the game instructions heading on desktop screens */
     #how-to-play {
         width: 93.7%;
     }
-
+    /* Styles for the width of the answer option buttons for mobile devices */
     .answer-option {
         width: 700px;
     }
-
+    /* Styles for the width of the question heading for desktop screens */
     #question {
         width: 600px;
     }
-
+    /* Styles for the width of the question area and game instructions area containers for desktop screens */
     #question-area,
     #game-instructions {
         width: 800px;
     }
-
+    /* Styles for the margin of the play again button for desktop screens */
     #play-again-btn {
         margin: 10px 37%;
     }

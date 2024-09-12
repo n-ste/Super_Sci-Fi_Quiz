@@ -197,5 +197,4 @@ document.addEventListener("DOMContentLoaded", () => {
     gameRules.addEventListener("click", showGameInstructions);
     submitQuiz.addEventListener("click", supplyUsername);
     usernameSubmit.addEventListener("click", generateScoreBoard);
-
 });
