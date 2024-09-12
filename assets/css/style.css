@@ -407,7 +407,7 @@ nav {
     /* Styles for the buttons in the nav container for tablet devices */
     #game-rules-btn,
     #reset-btn {
-        margin: 5px 0;
+        margin: 15px;
         padding: 25px;
         border-radius: 10px;
     }
