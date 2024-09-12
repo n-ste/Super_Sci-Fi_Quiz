@@ -6,9 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
             question: "In what year was the movie 'Star Wars' relased?",
             options: ["1979", "1987", "1981", "1977"],
             correct: "1977",
-            incorrect: "1979",
-            incorrect: "1987",
-            incorrect: "1981",
         },
         {
             question: "In what year did Marvel Comics publish the first 'Fantastic Four' Comic?",
@@ -82,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Runs function to display game instructions on page start up.
     showGameInstructions();
 
+
     // If else tatement to provide feedback for the correct and incorrect answer 
     const verifyAnswer = (e) => {
         let selectedAnswer = e.target.textContent;
@@ -127,11 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
             submitButton.style.display = "none";
             submitQuiz.style.display = "inline-block";
         }
-
         if (questionNo >= questionAllowance - 1) {
             return;
         }
-
         questionNo++;
         displayQuestions();
         options.classList.remove("disabled");
@@ -187,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
         playAgain.style.display = "none";
         submitQuiz.style.display = "none";
         usernameArea.style.display = "none";
-        scoreBoard.style.display = "none";
+        scoreBoard.style.display = "flex";
 
     }
 

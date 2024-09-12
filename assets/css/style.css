@@ -148,6 +148,11 @@ nav {
     width: 86%;
 }
 
+/* */
+#how-to-play.hide {
+    display: none;
+}
+
 /* Styles for the question number title */
 .question-number {
     width: 100%;

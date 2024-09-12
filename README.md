@@ -55,11 +55,11 @@ I carefully chose two fonts for this project as I didn't want to use too many an
 
 ![Kanit](./assets/docs/kanit-700.png)
 
-* The first font I chose was 'Kanit', and it's weight was set to 700. This font reminded me of something that would be quite popular in the 80s which I found fitting as this was a big decade for the sci-fi genre which is was the quiz was primarily based on. 
+* The first font I chose was 'Kanit', and it's weight was set to 700. This font reminded me of something that would be quite popular in the 80s which I found fitting as this was a big decade for the sci-fi genre which is was the quiz was primarily based on.
 
 ![Montserrat](./assets/docs/montserrat-400.png)
 
-* The second and final font I chose was 'Montserrat', in it's standard weight of 400. I chose this as I'd used it in past projects and I liked the way it looked and found it complemented 'Kanit', I used this for the paragraphs and main text included in the project. 
+* The second and final font I chose was 'Montserrat', in it's standard weight of 400. I chose this as I'd used it in past projects and I liked the way it looked and found it complemented 'Kanit', I used this for the paragraphs and main text included in the project.
 
 ## Colour Scheme
 
@@ -77,7 +77,7 @@ Like with the fonts I didn't want to have too many colours but wanted enough for
 
 * I used #439A86, for the background colour of the nav buttons and quiz container background colour. This is more of a forest green so it wasn't too similar with the colour I used for the background of the nav area.
 
-* The final colour that is used is #E9D985, which is a bright mustard colour. This is mainly used as the background colour of the submit and next question questions. I also used this for the quiz when giving the user a live display of their cumulative score as they answer the questions. 
+* The final colour that is used is #E9D985, which is a bright mustard colour. This is mainly used as the background colour of the submit and next question questions. I also used this for the quiz when giving the user a live display of their cumulative score as they answer the questions.
 
 ## Wireframes
 
@@ -164,7 +164,7 @@ As we're using Github to deploy the site we'll do this through pages.
 
 ### Javascript Validation
 
-* [Java Script]()
+* [Java Script](index.html)
 
 ### Bugs
 
