@@ -1,6 +1,6 @@
 # Super Sci-Fi Quiz
 
-![Responsive Web Design](./assets/images/responsive-web-layout.png)
+![Responsive Web Design](./assets/docs/responsive-web-layout.png)
 
 ## Contents
 
@@ -44,7 +44,8 @@
 
 ## User Experience
 
-* User Experience
+* In this project my goal was to create a simple quiz website that a user would answer the questions to and be provided with feedback during and after the quiz to let them know how well they did.
+* I chose to do this as a single scrolling page with elements that would appear and disappear depending on the buttons they clicked on.
 
 - - -
 
@@ -54,25 +55,43 @@
 
 I carefully chose two fonts for this project as I didn't want to use too many and make the project look cluttered, I imported these to my CSS file from Google Fonts.
 
-* Type
+![Kanit](./assets/docs/kanit-700.png)
 
-![Kanit 700]()
+* The first font I chose was 'Kanit', and it's weight was set to 700. This font reminded me of something that would be quite popular in the 80s which I found fitting as this was a big decade for the sci-fi genre which is was the quiz was primarily based on. 
 
-![Montserrat 400]()
+![Montserrat](./assets/docs/montserrat-400.png)
+
+* The second and final font I chose was 'Montserrat', in it's standard weight of 400. I chose this as I'd used it in past projects and I liked the way it looked and found it complemented 'Kanit', I used this for the paragraphs and main text included in the project. 
 
 ## Colour Scheme
 
-Like with the fonts I didn't want to have too many colours but wanted enough for contrast in different areas of the website and opted to use 8 colours in my project. 
+Like with the fonts I didn't want to have too many colours but wanted enough for contrast in different areas of the website and opted to use 6 colours in my project.
 
-![Website Colour Scheme]()
+![Colour Scheme - #E87070](./assets/docs/colour-palett.png)
+
+* The first colour I used in the project was #E87070 which is an orange-red colour, I used this for the header to start the project off with a bold colour. I paired this with a font colour for the main heading of #BCD8C1, which is a minty pistachio colour.
+
+* I also used #BCD8C1 for the background for the nav section as I liked the contrast between the light green and the darker green buttons on the nav section. The other time i used this colour was for the background of the the question container as it made the page feel more busy than if I was to leave it blank and make it seem like there might be something missing from the page.
+
+* The next colour I used was #222E50, this is more of a navy blue colour. I used this for the nav buttons as the border and font colour, and then the colours invert when the user hovers over these. I also used this colour for the bottom borders in my page and for the background for the question, question answer options headings, and font colour and border colour for the next and submit buttons. These colours also invert when the user hovers over these buttons so the background for the button becomes blue.
+
+* I chose to incorporate #ffffff, which is the lightest white shade. This is first used as the font colour for the question heading, answer option border and font colour, and  background colour for the questions, username container and final score result.
+
+* I used #439A86, for the background colour of the nav buttons and quiz container background colour. This is more of a forest green so it wasn't too similar with the colour I used for the background of the nav area.
+
+* The final colour that is used is #E9D985, which is a bright mustard colour. This is mainly used as the background colour of the submit and next question questions. I also used this for the quiz when giving the user a live display of their cumulative score as they answer the questions. 
 
 ## Wireframes
 
 ### Imagery
 
+![Favicon](./assets/docs/favicon-example.png)
+
+* As I was going for a more 80s look, I opted not to use any images in this project, with the exception of the favicon. For this, I chose to use an alien gaming emoji as this would fit in with the theme of the project.
+
 ### Features
 
-* Navigation Menu
+* Navigation
 
   * When I started working on this project I knew that I wanted to have a single page with elements that would be hidden when different buttons were used.
 
