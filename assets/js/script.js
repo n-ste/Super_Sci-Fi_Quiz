@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const startButton = document.getElementById("start-btn");
     const gameRules = document.getElementById("game-rules-btn");
     const gameInstructions = document.getElementById("game-instructions");
-    const scoreBoardHeader = document.getElementById("btn-score-board-header");
     let scoreBoard = document.getElementById("score-board");
     let questionNumber = document.getElementById("question-number");
     let displayedUserName = document.getElementById("user-input-name");
@@ -147,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
         submitButton.classList.add("hide");
         usernameArea.style.display = "none";
         displayScore();
-
+        playAgain.style.display = "block";
     };
 
     function restart() {
@@ -164,6 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
         submitButton.style.display = "inline-block";
         gameInstructions.style.display = "none";
         usernameArea.style.display = "none";
+        scoreBoard.style.display = "none";
     }
     function showGameInstructions() {
         gameInstructions.style.display = "flex";
@@ -173,6 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
         playAgain.style.display = "none";
         submitQuiz.style.display = "none";
         usernameArea.style.display = "none";
+        scoreBoard.style.display = "none";
 
     }
 
@@ -180,7 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton.addEventListener("click", nextQuestion);
     playAgain.addEventListener("click", restart);
     resetGame.addEventListener("click", restart);
-    scoreBoardHeader.addEventListener("click", generateScoreBoard);
     gameRules.addEventListener("click", showGameInstructions);
     submitQuiz.addEventListener("click", supplyUsername);
     usernameSubmit.addEventListener("click", generateScoreBoard);

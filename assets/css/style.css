@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #BCD8C1;
+    background-color: #439a86;
 }
 
 .heading {
@@ -33,6 +33,7 @@ nav {
     align-items: center;
     text-align: center;
     background-color: #BCD8C1;
+    border-bottom: 5px solid #222e50;
 }
 #username-container {
     margin: 25px;
@@ -78,7 +79,6 @@ nav {
     color: #222e50;
     height: 50px;
     font-size: 2rem;
-    border-top: 5px solid #222e50;
     border-bottom: 5px solid #222e50;
 }
 
@@ -101,6 +101,7 @@ nav {
 #question-area {
     width: 300px;
     margin: 25px;
+    background-color: #BCD8C1;
 }
 
 #question-area,
@@ -109,7 +110,6 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #bcd8c1;
     padding: 0 0 20px 0;
     border-radius: 10px;
 }
@@ -246,7 +246,9 @@ nav {
     color: #222e50;
     border: 3px solid #222e50;
 }
-
+#play-again-btn {
+    margin: 15px 190px;
+}
 #btn-score-board-header,
 #game-rules-btn,
 #reset-btn {
@@ -291,6 +293,7 @@ nav {
 #score-board {
     display: none;
     width: 86%;
+    margin: 20px;
 }
 
 #start-btn,
@@ -387,6 +390,10 @@ nav {
     .btn-submit-answer:hover {
         padding: 25px 230px;
     }
+
+    #play-again-btn {
+        margin: 10px 30%;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -406,6 +413,9 @@ nav {
     .btn-submit-answer {
         padding: 25px 300px;
     }
+    .btn-submit-answer:hover {
+        padding: 25px 300px;
+    }
 
     .answer-option {
         width: 600px;
@@ -422,6 +432,10 @@ nav {
 
     .question-container {
         width: 650px;
+    }
+
+    #play-again-btn {
+        margin: 10px 35%;
     }
 }
 
@@ -452,11 +466,7 @@ nav {
         width: 800px;
     }
 
-    .btn-submit-answer {
-        padding: 25px 300px;
-    }
-
-    .btn-submit-answer:hover {
-        padding: 25px 300px;
+    #play-again-btn {
+        margin: 10px 37%;
     }
 }
