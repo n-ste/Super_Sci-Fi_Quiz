@@ -16,26 +16,40 @@
 <body>
     <!-- Main Page Heading-->
     <header>
+        <!-- Title Heading-->
         <h1 class="heading"><a href="index.html">Super Sci-Fi Quiz</a></h1>
+        <!-- Navigation Container -->
         <nav>
+            <!-- Game Rules Button -->
             <button id="game-rules-btn">Game Rules</button>
+            <!-- Reset Button -->
             <button id="reset-btn">Reset Game</button></div>
             </div>
         </nav>
     </header>
     <!-- Displays the users current score -->
+     <!-- Main Container -->
     <div class="main">
+        <!-- Username Container -->
         <div id="username-container" class="hide">
+            <!-- Username Title -->
             <h2 id="username-title">Please Submit a Username</h2>
+            <!-- Username Container -->
             <div id="submit-username">
+                <!-- Form for the Username Text Box and Submit Button -->
                 <form">
+                <!-- Username Text Box -->
                     <input id="username" type="text" name="username" required pattern=".*\S+.*" placeholder=" Username">
+                    <!-- Username Submit Button -->
                     <button id="username-btn" type="submit">Go</button>
                     </form>
             </div>
         </div>
+        <!-- Game Instructions Container -->
         <div id="game-instructions">
+            <!-- Game Instructions Heading -->
             <h2 id="how-to-play">How to Play!</h2>
+            <!-- Game Instructions Text Content-->
             <div id="instructions-text">
                 <p>Hello and welcome to the Super Sci-Fi Quiz. The instructions are simple...</p>
                 <br>
@@ -49,8 +63,10 @@
                     you'll
                     get 1 point for each question you answer correct. Good luck!</p>
             </div>
+            <!-- Star Game Button -->
             <button id="start-btn">Start</button>
         </div>
+        <!-- Score Header-->
         <p id="score-header" class="score">Score: <span id="score">0</span></p>
         <!-- Quiz Area Section -->
         <div id="quiz-area">
@@ -63,20 +79,27 @@
                     <!-- Current Question -->
                     <h3 id="question"></h3>
                 </div>
+                <!-- Question Answer Options Container -->
                 <div id="answers">
                     <!-- Question answer options created through JavaScript -->
                 </div>
             </div>
+            <!-- Submit Buttons Container -->
             <div class="submit-buttons">
                 <!-- Submit Answer Button-->
                 <button class="btn-submit-answer" id="btn-submit-answer">Next</button>
             </div>
+            <!-- Quiz Results Submission Button -->
             <button id="submit-quiz-results">Submit</button>
+            <!-- Score Board Container -->
             <div id="score-board">
                 <p id="score-board-table">
+                    <!-- Score Board Heading -->
                     <h2 id="user-input-heading">Thanks for completing the quiz!</h2>
+                    <!-- Submit Name for Quiz Score -->
                     <span id="user-input-name"></span>
                 </p>
+                <!-- Play Again Buttom -->
                 <button id="play-again-btn" class="hide">Play Again</button>
             </div>
         </div>

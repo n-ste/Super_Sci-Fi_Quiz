@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
     myQuestionArray = questionShuffle(myQuestionArray);
     // Help displaying the questions and options for quiz sources from Youtube, credits in README file.
     const displayQuestions = () => {
-        ;
         options.innerHTML = "";
         questionNumber.innerHTML = questionNo + 1;
         question.innerHTML = myQuestionArray[questionNo].question;
@@ -113,10 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
             answerOption.innerHTML = option;
             answerOption.addEventListener("click", (e) => {
                 verifyAnswer(e);
-            })
+            });
             options.appendChild(answerOption);
         });
-    }
+    };
     displayQuestions();
 
     // If statement to stop the quiz if the value of questions is greater than the amount of questions on the array
@@ -128,19 +127,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (questionNo >= questionAllowance - 1) {
             return;
-        };
+        }
 
         questionNo++;
         displayQuestions();
         options.classList.remove("disabled");
-    };
+    }
 
     // Displays the final score once the quiz has been completed
     function displayScore() {
         let finalScore = currentUserScore;
         displayedUserName.innerHTML = username.value + " Scored " + finalScore + "/10";
         scoreBoard.style.display = "block";
-    };
+    }
 
     // Functions to display the username window once the question answers have been submitted
     function supplyUsername() {
@@ -148,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         submitQuiz.style.display = "none";
         quizArea.style.display = "none";
         scoreHeader.style.display = "none";
-    };
+    }
     // Function to hide sections of the page once the quize had been submitted and display the results of the quiz
     function generateScoreBoard() {
         scoreBoard.classList.remove("hide");
@@ -157,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         usernameArea.style.display = "none";
         displayScore();
         playAgain.style.display = "block";
-    };
+    }
 
     // Function to closes the other windows when you want to play the quiz again and displays the quiz questions
     function restart() {
