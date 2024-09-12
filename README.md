@@ -81,6 +81,12 @@ Like with the fonts I didn't want to have too many colours but wanted enough for
 
 ## Wireframes
 
+![Wireframes](./assets/docs/wireframes.png)
+
+* I've opted to have the design look very similar on all devices to remain the classic look while still managing to be accessible.
+
+* For the mobile view there will be less margin space so that the content doesn't appear too cramped. With the tablet view the margins will get wider, and I took this same  principle with the laptop and desktop screen displays.
+
 ### Imagery
 
 ![Favicon](./assets/docs/favicon-example.png)
@@ -89,13 +95,51 @@ Like with the fonts I didn't want to have too many colours but wanted enough for
 
 ### Features
 
-* Navigation
+#### Navigation
 
-  * When I started working on this project I knew that I wanted to have a single page with elements that would be hidden when different buttons were used.
+![Navigation](./assets/docs/quiz-navigation.png)
 
-  * Every page will have the same format and I started this by incorporating a navigation menu which will link to the id of the section I wished to show when clicking on the right buttons.
+* When I started working on this project I knew that I wanted to have a single page with elements that would be hidden when different buttons were used.
+
+* Every page will have the same format and I started this by incorporating a navigation menu which will link to the id of the section I wished to show when clicking on the right buttons.
+
+#### Instructions Page
+
+![Instructions Page](./assets/docs/)
+
+* I decided to start the project by incorporating an area to explain the rules of the game. This feaured a box explaining the scoring system and what the feedback the user will recieve when they answer correctly and incorrectly.
+
+#### Correct and Incorrect Answer Feedback
+
+* For giving customer feedback I wanted to ensure that the user will know as soon as they've answered the question. I did this by changing the background colour of the answer.
+
+![Correct Answer Feedback](./assets/docs/quiz-correct.png)
+![Live Score Banner](./assets/docs/score-bar.png)
+
+* If the user answered the question correctly the background colour would change to green and the score value on the banner would go up by 1 point.
+
+![Incorrect Answer Feedback](./assets/docs/quiz-incorrect.png)
+
+* If the user answered the question incorrectly then the background of the button would change to red.
+
+#### Username Form and Score Result Alert
+
+![Username Form](./assets/docs/username-field.png)
+
+* At the end of the quiz after the submit button has been clicked the user will then see a form on the webpage advising them to submit a username to see their result.
+
+#### Score Result Alert
+
+![Score Result Alert](./assets/docs/results-alert.png)
+
+* When the user submitted their username they should then see a small window appear on the screen advising what the result of their quiz would be.
 
 ### Accessibility
+
+* One of my main goals was to make this website as accessible as possible and I did this by:
+  * Using semantic selectors in my HTML through the use of an aria-label to allow the links to be read aloud for those using screen readers.
+  * Providing the website with a fallback font for if the browser the user was using wouldn't load the page as it was initially designed.
+  * Using contrasting colours for the background, section and headings.
 
 ## Technologies Used
 
@@ -164,7 +208,9 @@ As we're using Github to deploy the site we'll do this through pages.
 
 ### Javascript Validation
 
-* [Java Script](index.html)
+![Java Script](./assets/docs/js-validation.png)
+
+* No errors came back on JSHint. But there were 35 warnings in total advising "arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').", "'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).", "'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)." However, after revieiwing this with my mentor it was explained this was normal and nothing to be worried about.
 
 ### Bugs
 
@@ -178,7 +224,15 @@ As we're using Github to deploy the site we'll do this through pages.
 
 * No issues were found with the CSS file. However, there was a warning issued stating "Imported style sheets are not checked in direct input and file upload modes." After researching into this I discovered this is nothing to worry about and more of a declaration.
 
+#### Lighthouse
+
+![Lighthouse](./assets/docs/lighthouse-testing.png)
+
+* When I ran the checks though Lighthouse it cam back that the performance was rated 99, the accessability was 94, best practices at 100, and SEO at 100. Due to this I made no amendments.
+
 #### JavaScript
+
+* No issues came from the JavaScript validation. However, there were errors with my JavaScript which I will touch on in the known bugs section.
 
 ### Known Bugs
 
@@ -188,18 +242,16 @@ As we're using Github to deploy the site we'll do this through pages.
 * CSS
   * 1 warning was found stating "Imported style sheets are not checked in direct input and file upload modes." But after researching this found there is nothing of concern with this and no amendments are required.
 
+* JavaScript
+  * There are 2 issues that I'm aware of in my JavaScript. The first on is to do with the score counting. When playing the game there will be a delay in the score going up if you get the answer correct. This usually appears after the next question, I've researched and adjusted my code for this but I've been unable to get the the root of the issue. There were attempts to resolve this but they ended up in the score not tracking at all. For this reason I've left it as it is with the hope to diagnose and resolve this in the future. But I will note that when the score is submitted the accurate result is generated.
+  * The second fault I was unable to validate the form at the end of the project where the user is asked to submit their name before receiving the results. I tried to resolve this, but unfortunately this ended in the page crashing and not showing the results all together, whether or not a name was submitted. But again like the other bug this is something I look to resolve in the future.
+
 ## Credits
 
 ### Code
 
 * [Youtube -  Build A Quiz Website Using HTML, CSS & JavaScript (Part 2) - Live Blogger](https://n-ste.github.io/Super_Sci-Fi_Quiz/)
   * I used the above video to aid me in trying to figure out a way to pull my questions and answers from the array to be displayed when their function was called.
-
-* [SweetAlert2](https://sweetalert2.github.io/)
-  * I used SweetAlert to change the format of the alert box that popped up if the user gets the incorrect answer in the quiz and when they try to submit their username with whitespace.
-
-* [StackOverflow](https://stackoverflow.com/questions/1151032/javascript-blank-space-validation)
-  * I used the link above to help me figure out a way to prevent the user from submitting their score by using white space.
 
 ### Content
 

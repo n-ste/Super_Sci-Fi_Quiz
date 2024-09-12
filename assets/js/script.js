@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Global Variables
-    // Attay for quiz questions
     let userScore = document.getElementById("score");
     let myQuestionArray = [{
             question: "In what year was the movie 'Star Wars' relased?",
@@ -55,14 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    // Variables that link from the HTML elements
     const quizArea = document.getElementById("question-area");
     const question = document.getElementById("question");
     const options = document.getElementById("answers");
     const scoreHeader = document.getElementById("score-header");
     const submitButton = document.querySelector(".submit-buttons .btn-submit-answer");
+    const usernameButton = document.getElementById("username-btn");
     const usernameArea = document.getElementById("username-container");
-    const usernameSubmit = document.getElementById("username-btn");
     const submitQuiz = document.getElementById("submit-quiz-results");
     const playAgain = document.getElementById("play-again-btn");
     const resetGame = document.getElementById("reset-btn");
@@ -70,41 +67,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const startButton = document.getElementById("start-btn");
     const gameRules = document.getElementById("game-rules-btn");
     const gameInstructions = document.getElementById("game-instructions");
-    let scoreBoard = document.getElementById("score-board");
     let questionNumber = document.getElementById("question-number");
-    let displayedUserName = document.getElementById("user-input-name");
+    let displayedUserName = document.getElementById("score-board");
     let questionNo = 0;
     let currentUserScore = 0;
 
-    // Runs function to display game instructions on page start up.
-    showGameInstructions();
-
-
-    // If else tatement to provide feedback for the correct and incorrect answer 
     const verifyAnswer = (e) => {
         let selectedAnswer = e.target.textContent;
-        userScore.innerHTML = currentUserScore;
+        userScore.innerHTML = currentUserScore;  
         console.log(selectedAnswer);
         if (selectedAnswer == myQuestionArray[questionNo].correct) {
             currentUserScore++;
-            options.classList.add("disabled");
             e.target.classList.add("correct");
+            options.classList.add("disabled");
         } else {
             e.target.classList.add("incorrect");
             options.classList.add("disabled");
         }
     };
-
+    
     const questionAllowance = 10;
-    // Shuffles the questions so they arreap in a different order each time the display question function is run
     const questionShuffle = (array) => {
         return array.slice().sort(() => Math.random() - 0.5);
     };
-
+   
     myQuestionArray = questionShuffle(myQuestionArray);
     // Help displaying the questions and options for quiz sources from Youtube, credits in README file.
     const displayQuestions = () => {
         options.innerHTML = "";
+        usernameArea.style.display = "none";
         questionNumber.innerHTML = questionNo + 1;
         question.innerHTML = myQuestionArray[questionNo].question;
         myQuestionArray[questionNo].options.forEach((option) => {
@@ -119,45 +110,48 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     displayQuestions();
 
-    // If statement to stop the quiz if the value of questions is greater than the amount of questions on the array
     function nextQuestion() {
         if (questionNo >= questionAllowance - 2) {
             submitButton.style.display = "none";
             submitQuiz.style.display = "inline-block";
         }
+
         if (questionNo >= questionAllowance - 1) {
             return;
         }
+
         questionNo++;
         displayQuestions();
         options.classList.remove("disabled");
     }
 
-    // Displays the final score once the quiz has been completed
     function displayScore() {
         let finalScore = currentUserScore;
-        displayedUserName.innerHTML = username.value + " Scored " + finalScore + "/10";
-        scoreBoard.style.display = "block";
+        let playerName = document.getElementById("username");
+
+        alert(playerName.value + " Scored " + finalScore + "/10");
     }
 
-    // Functions to display the username window once the question answers have been submitted
-    function supplyUsername() {
-        usernameArea.style.display = "block";
+    function generateScoreBoard() {
         submitQuiz.style.display = "none";
         quizArea.style.display = "none";
-        scoreHeader.style.display = "none";
-    }
-    // Function to hide sections of the page once the quize had been submitted and display the results of the quiz
-    function generateScoreBoard() {
-        scoreBoard.classList.remove("hide");
+        usernameArea.style.display = "inline-block";
         playAgain.classList.remove("hide");
         submitButton.classList.add("hide");
-        usernameArea.style.display = "none";
-        displayScore();
-        playAgain.style.display = "block";
+        usernameArea.style.display = "block";
+        playAgain.style.display = "none";
+        submitButton.style.display = "none";
+        scoreHeader.style.display = "none";
+        displayScore.style.display = "block";
     }
 
-    // Function to closes the other windows when you want to play the quiz again and displays the quiz questions
+    function submitName() {
+        displayScore();
+        usernameArea.style.display = "none";
+        displayedUserName.style.display = "block";
+        gameInstructions.style.display = "none";
+    }
+
     function restart() {
         questionNo = 0;
         currentUserScore = 0;
@@ -172,9 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
         submitButton.style.display = "inline-block";
         gameInstructions.style.display = "none";
         usernameArea.style.display = "none";
-        scoreBoard.style.display = "none";
     }
-    // Function to display the game instructions and hide other areas of the quiz
     function showGameInstructions() {
         gameInstructions.style.display = "flex";
         quizArea.style.display = "none";
@@ -182,17 +174,13 @@ document.addEventListener("DOMContentLoaded", () => {
         submitButton.style.display = "none";
         playAgain.style.display = "none";
         submitQuiz.style.display = "none";
-        usernameArea.style.display = "none";
-        scoreBoard.style.display = "flex";
-
     }
 
-    // Event listeners for when you click the buttons on the page so the functions are run.
     startButton.addEventListener("click", restart);
     submitButton.addEventListener("click", nextQuestion);
     playAgain.addEventListener("click", restart);
     resetGame.addEventListener("click", restart);
     gameRules.addEventListener("click", showGameInstructions);
-    submitQuiz.addEventListener("click", supplyUsername);
-    usernameSubmit.addEventListener("click", generateScoreBoard);
+    submitQuiz.addEventListener("click", generateScoreBoard);
+    usernameButton.addEventListener("click", submitName);
 });
