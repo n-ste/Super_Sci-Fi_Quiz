@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Global Variables
+    // Attay for quiz questions
     let userScore = document.getElementById("score");
     let myQuestionArray = [{
             question: "In what year was the movie 'Star Wars' relased?",
@@ -53,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
+    // Variables that link from the HTML elements
     const quizArea = document.getElementById("question-area");
     const question = document.getElementById("question");
     const options = document.getElementById("answers");
@@ -73,8 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let questionNo = 0;
     let currentUserScore = 0;
 
+    // Runs function to display game instructions on page start up.
     showGameInstructions();
 
+    // If else tatement to provide feedback for the correct and incorrect answer 
     const verifyAnswer = (e) => {
         let selectedAnswer = e.target.textContent;
         currentUserScore++;
@@ -88,15 +93,17 @@ document.addEventListener("DOMContentLoaded", () => {
             options.classList.add("disabled");
         }
     };
-    
+
     const questionAllowance = 10;
+    // Shuffles the questions so they arreap in a different order each time the display question function is run
     const questionShuffle = (array) => {
         return array.slice().sort(() => Math.random() - 0.5);
     };
- 
+
     myQuestionArray = questionShuffle(myQuestionArray);
     // Help displaying the questions and options for quiz sources from Youtube, credits in README file.
-    const displayQuestions = () => {;
+    const displayQuestions = () => {
+        ;
         options.innerHTML = "";
         questionNumber.innerHTML = questionNo + 1;
         question.innerHTML = myQuestionArray[questionNo].question;
@@ -112,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     displayQuestions();
 
+    // If statement to stop the quiz if the value of questions is greater than the amount of questions on the array
     function nextQuestion() {
         if (questionNo >= questionAllowance - 2) {
             submitButton.style.display = "none";
@@ -127,19 +135,21 @@ document.addEventListener("DOMContentLoaded", () => {
         options.classList.remove("disabled");
     };
 
+    // Displays the final score once the quiz has been completed
     function displayScore() {
         let finalScore = currentUserScore;
         displayedUserName.innerHTML = username.value + " Scored " + finalScore + "/10";
         scoreBoard.style.display = "block";
     };
 
+    // Functions to display the username window once the question answers have been submitted
     function supplyUsername() {
-        usernameArea.style.display= "block";
+        usernameArea.style.display = "block";
         submitQuiz.style.display = "none";
         quizArea.style.display = "none";
         scoreHeader.style.display = "none";
     };
-
+    // Function to hide sections of the page once the quize had been submitted and display the results of the quiz
     function generateScoreBoard() {
         scoreBoard.classList.remove("hide");
         playAgain.classList.remove("hide");
@@ -149,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
         playAgain.style.display = "block";
     };
 
+    // Function to closes the other windows when you want to play the quiz again and displays the quiz questions
     function restart() {
         questionNo = 0;
         currentUserScore = 0;
@@ -165,6 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
         usernameArea.style.display = "none";
         scoreBoard.style.display = "none";
     }
+    // Function to display the game instructions and hide other areas of the quiz
     function showGameInstructions() {
         gameInstructions.style.display = "flex";
         quizArea.style.display = "none";
@@ -177,6 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    // Event listeners for when you click the buttons on the page so the functions are run.
     startButton.addEventListener("click", restart);
     submitButton.addEventListener("click", nextQuestion);
     playAgain.addEventListener("click", restart);
@@ -184,5 +197,5 @@ document.addEventListener("DOMContentLoaded", () => {
     gameRules.addEventListener("click", showGameInstructions);
     submitQuiz.addEventListener("click", supplyUsername);
     usernameSubmit.addEventListener("click", generateScoreBoard);
-    
+
 });
