@@ -82,13 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // If else tatement to provide feedback for the correct and incorrect answer 
     const verifyAnswer = (e) => {
         let selectedAnswer = e.target.textContent;
-        currentUserScore++;
+        
         userScore.innerHTML = currentUserScore;
         console.log(selectedAnswer);
         if (selectedAnswer == myQuestionArray[questionNo].correct) {
+            currentUserScore++;
             e.target.classList.add("correct");
+            e.target.classList.add("incorrect");
             options.classList.add("disabled");
         } else {
+            e.target.classList.add("correct");
             e.target.classList.add("incorrect");
             options.classList.add("disabled");
         }
