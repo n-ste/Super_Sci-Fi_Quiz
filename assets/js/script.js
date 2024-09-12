@@ -71,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const scoreBoardHeader = document.getElementById("btn-score-board-header");
     let scoreBoardTable = document.getElementById("score-board-table");
     let questionNumber = document.getElementById("question-number");
+    let displayedUserName = document.getElementById("user-input-name");
+    let playerName = document.getElementById("username");
     let questionNo = 0;
     let currentUserScore = 0;
 
@@ -92,9 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const questionShuffle = (array) => {
         return array.slice().sort(() => Math.random() - 0.5);
     };
-    function submitUsername() {
-        usernameArea.style.display = "none";
-    }
+   // function submitUsername() {
+       // usernameArea.style.display = "none";
+   // }
     myQuestionArray = questionShuffle(myQuestionArray);
     // Help displaying the questions and options for quiz sources from Youtube, credits in README file.
     const displayQuestions = () => {;
@@ -128,14 +130,20 @@ document.addEventListener("DOMContentLoaded", () => {
         options.classList.remove("disabled");
     };
 
+    function displayScore() {
+        let finalScore = currentUserScore;
+        displayedUserName.innerHTML = username.value + " Scored " + finalScore + "/10";
+    };
+
     function generateScoreBoard() {
         submitQuiz.style.display = "none";
         quizArea.style.display = "none";
+        usernameArea.style.display = "inline-block";
         scoreBoardTable.classList.remove("hide");
         scoreHeader.style.display = "none";
-        scoreBoardButton.classList.add("hide");
         playAgain.classList.remove("hide");
         submitButton.classList.add("hide");
+        displayScore();
     };
 
     function restart() {
@@ -168,6 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
     resetGame.addEventListener("click", restart);
     scoreBoardHeader.addEventListener("click", generateScoreBoard);
     gameRules.addEventListener("click", showGameInstructions);
-    usernameButton.addEventListener("click", submitUsername);
     submitQuiz.addEventListener("click", generateScoreBoard);
+    
 });

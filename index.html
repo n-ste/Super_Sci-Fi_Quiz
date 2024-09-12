@@ -30,7 +30,7 @@
             <h2 id="username-title">Please Submit a Username</h2>
             <div id="submit-username">
                 <form">
-                    <input id="username" type="text" name="username" placeholder=" Username">
+                    <input id="username" type="text" name="username" required pattern=".*\S+.*" placeholder=" Username">
                     <button id="username-btn" type="submit">Go</button>
                     </form>
             </div>
@@ -74,7 +74,9 @@
             </div>
             <button id="submit-quiz-results">Submit</button>
             <div id="score-board">
-                <p id="score-board-table" class="hide"></p>
+                <p id="score-board-table" class="hide">
+                    <p><span id="user-input-name"></span></p>
+                </p>
                 <button id="play-again-btn" class="hide">Play Again</button>
             </div>
         </div>
